@@ -1,0 +1,85 @@
+site_name: Rocket - Launch pad
+site_description: Complete knowledge base to help you get started with Rocket's behavioural change and learning engagement platform
+site_url: http://127.0.0.1:8000/  # change this
+theme:
+  features:
+    - content.footnote.tooltips
+
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  font:
+    text: Poppins
+    code: Roboto Mono
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue grey
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - About:
+      - Foundations: About/Foundations.md
+      - Vision & Goals: About/Vision.md
+  - How it works: About/How-it-works.md
+  - Getting Started:
+      - Overview: Onboarding/overview.md
+      - Administrators: Onboarding/administrator.md
+      - Instructors: Onboarding/instructor.md
+      - Learners: Onboarding/learner.md
+  - Integrations:
+      - Moodle: Integrations/moodle.md
+      - Open LMS: Integrations/olms.md
+      - Canvas: Integrations/canvas.md
+      - LearnWorlds: Integrations/learnworlds.md
+  - Rewards: Rewards/rewards.md 
+
+  - Troubleshooting: 
+      - Frequently Asked Questions (FAQs): Troubleshooting/faq.md
+      - Reset Your Password: Troubleshooting/password-reset.md
+  - Compliance & Data Security: Data Security/data-security.md
+  - Roadmap: Roadmap/roadmap.md
+  - Contact: Contact/contact.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/rocket-education-rewards
+    - icon: fontawesome/solid/envelope
+      link: mailto:hello@rocketeducationrewards.com
+  generator: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - footnotes
+
+plugins:
+  - social
+  - search:
+      
+
+
+
+
