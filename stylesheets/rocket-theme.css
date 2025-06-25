@@ -1,0 +1,133 @@
+:root {
+  /* Rocket Brand Colors */
+  --rocket-primary: #1e3a8a;      /* Deep blue */
+  --rocket-secondary: #f97316;     /* Orange accent */
+  --rocket-success: #10b981;       /* Green for success states */
+  --rocket-warning: #f59e0b;       /* Amber for warnings */
+  --rocket-error: #ef4444;         /* Red for errors */
+  --rocket-gray: #64748b;          /* Neutral gray */
+  
+  /* Gradients matching Rocket's style */
+  --rocket-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  --rocket-accent-gradient: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+}
+
+/* Header customization */
+.md-header {
+  background: var(--rocket-gradient);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+}
+
+.md-header__title {
+  font-weight: 700;
+  color: white;
+}
+
+/* Navigation styling */
+.md-nav__title {
+  font-weight: 600;
+  color: var(--rocket-primary);
+}
+
+/* Progress indicators (matching Rocket's gamification theme) */
+.md-content__inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--rocket-accent-gradient);
+  border-radius: 2px;
+}
+
+/* Admonition boxes styled like Rocket's cards */
+.md-typeset .admonition {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.md-typeset .admonition.tip {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  color: white;
+}
+
+.md-typeset .admonition.warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  color: white;
+}
+
+.md-typeset .admonition.danger {
+  background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+  color: white;
+}
+
+/* Buttons matching Rocket's CTA style */
+.md-button {
+  background: var(--rocket-accent-gradient);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: none;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+}
+
+/* Code blocks with Rocket theming */
+.md-typeset .highlight {
+  border-radius: 12px;
+  border-left: 4px solid var(--rocket-secondary);
+}
+
+/* Tables with modern styling */
+.md-typeset table:not([class]) {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--rocket-gradient);
+  color: white;
+  font-weight: 600;
+}
+
+/* Progress bars for documentation sections */
+.progress-container {
+  background: #e5e7eb;
+  border-radius: 10px;
+  padding: 4px;
+  margin: 20px 0;
+}
+
+.progress-bar {
+  background: var(--rocket-accent-gradient);
+  height: 8px;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+/* Rocket-themed icons */
+.rocket-icon::before {
+  content: "🚀";
+  margin-right: 8px;
+}
+
+.achievement-icon::before {
+  content: "🏆";
+  margin-right: 8px;
+}
+
+.points-icon::before {
+  content: "⭐";
+  margin-right: 8px;
+}
