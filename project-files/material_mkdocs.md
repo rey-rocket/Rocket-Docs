@@ -314,4 +314,166 @@ mike set-default --push latest        # set default version
 
 ---
 
+## 12) Advanced Customization & Troubleshooting
+
+### Custom CSS Issues
+
+**Problem**: Custom CSS not loading or applying in GitHub Pages deployment
+
+**Common Causes & Solutions:**
+
+1. **Missing `md_in_html` extension** (CRITICAL for custom HTML in markdown)
+   ```yaml
+   markdown_extensions:
+     - md_in_html
+     - attr_list
+   ```
+
+2. **Incorrect CSS file paths** in GitHub Pages subpath deployment
+   - Ensure `site_url` in `mkdocs.yml` matches GitHub Pages URL exactly
+   - Use relative paths: `stylesheets/extra.css` not `/stylesheets/extra.css`
+
+3. **CSS specificity issues** with Material theme
+   ```css
+   /* Use high specificity to override Material theme */
+   .md-typeset .custom-component {
+     /* Your styles with !important if needed */
+   }
+   ```
+
+4. **Missing CSS custom properties for Material theme integration**
+   ```css
+   [data-md-color-scheme="default"] {
+     --md-primary-fg-color: #custom-color;
+     --md-accent-fg-color: #custom-accent;
+   }
+   ```
+
+### Custom HTML Components in Markdown
+
+**Requirements for custom HTML to work:**
+
+1. **Enable required extensions:**
+   ```yaml
+   markdown_extensions:
+     - md_in_html
+     - attr_list
+     - pymdownx.superfences
+   ```
+
+2. **Use proper HTML syntax with `markdown` attribute:**
+   ```html
+   <div class="custom-card" markdown>
+   ## Markdown content works here
+   Regular markdown **bold** and *italic*
+   </div>
+   ```
+
+3. **Alternative: Use CSS classes with Material's attr_list:**
+   ```markdown
+   [Get Started](link.md){ .md-button .md-button--primary .custom-class }
+   ```
+
+### GitHub Pages Deployment
+
+**Automated GitHub Actions Deployment** (Recommended):
+
+1. Create `.github/workflows/ci.yml`:
+   ```yaml
+   name: ci
+   on:
+     push:
+       branches: [ main, master ]
+   permissions:
+     contents: write
+   jobs:
+     deploy:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v4
+         - uses: actions/setup-python@v5
+           with:
+             python-version: 3.x
+         - run: pip install mkdocs-material
+         - run: mkdocs gh-deploy --force
+   ```
+
+**Manual Deployment Issues:**
+- Ensure you're on the correct branch
+- Run `mkdocs build` first to test locally
+- Use `mkdocs gh-deploy --force` to override
+- Check GitHub Pages settings: Source should be `gh-pages` branch
+
+### Debugging Custom Styling
+
+**Step-by-step debugging:**
+
+1. **Test locally first:**
+   ```bash
+   mkdocs serve
+   # Check if styling works at localhost:8000
+   ```
+
+2. **Inspect built CSS file:**
+   ```bash
+   mkdocs build
+   # Check if CSS exists in site/stylesheets/extra.css
+   ```
+
+3. **Browser developer tools:**
+   - Check if CSS file loads (Network tab)
+   - Inspect elements for applied styles
+   - Look for CSS specificity conflicts
+
+4. **Validate HTML structure:**
+   - Custom HTML must be properly nested
+   - Markdown content needs `markdown` attribute
+   - Check for unclosed tags
+
+### Theme Extension Best Practices
+
+**For complex customizations:**
+
+1. **Use theme overrides sparingly:**
+   ```yaml
+   theme:
+     name: material
+     custom_dir: overrides/
+   ```
+
+2. **Prefer CSS over template overrides:**
+   - Less maintenance overhead
+   - Better upgrade compatibility
+   - Easier to debug
+
+3. **Use CSS custom properties:**
+   ```css
+   :root {
+     --custom-primary: #F36739;
+     --custom-secondary: #1863DC;
+   }
+   
+   [data-md-color-scheme="default"] {
+     --md-primary-fg-color: var(--custom-primary);
+   }
+   ```
+
+### Common Pitfalls
+
+❌ **Don't do:**
+- Multiple CSS files without proper organization
+- Custom HTML without `md_in_html` extension
+- Absolute paths in CSS file references
+- Forgetting `site_url` configuration for GitHub Pages
+- Using complex template overrides for simple styling
+
+✅ **Do:**
+- Single `extra.css` file with organized sections
+- Enable required markdown extensions
+- Test locally before deployment
+- Use CSS custom properties for theming
+- Follow Material's CSS class conventions
+
+---
+
 *Happy writing!* 🧪📘
