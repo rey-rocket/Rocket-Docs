@@ -8,7 +8,7 @@ Before beginning installation, ensure you have:
 
 <div class="implementation-checklist">
   <div class="checklist-header">
-    <div class="checklist-icon">🔧</div>
+    <div class="checklist-icon">:material-wrench:</div>
     <h3 class="checklist-title">Technical Prerequisites</h3>
   </div>
   
@@ -57,7 +57,7 @@ npm run verify
 ```
 
 <div class="alert alert-info">
-  <h4>💡 Pro Tip</h4>
+  <h4>:material-lightbulb: Pro Tip</h4>
   <p>Use a bot user token for API access. This helps you track events separately from human users and provides better security isolation.</p>
 </div>
 

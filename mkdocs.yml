@@ -1,18 +1,51 @@
 site_name: Rocket Learning Rewards
 site_url: https://rey-rocket.github.io/Rocket-Docs/
 site_description: Fuel Engagement. Reward Progress. Drive Success.
+site_author: Rocket Education Rewards
 
-# Theme Configuration - Left Navigation Style
+# Repository
+repo_url: https://github.com/rey-rocket/Rocket-Docs
+repo_name: rey-rocket/Rocket-Docs
+edit_uri: edit/main/docs/
+
+# Theme Configuration - Enhanced Navigation
 theme:
-  features:
-    - content.footnote.tooltips
-
   name: material
-  logo: assets/logo.png
-  favicon: assets/favicon.ico
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.ico
   font:
     text: Poppins
     code: Roboto Mono
+  
+  # Navigation Features - Cedar-inspired layout
+  features:
+    # Navigation Structure
+    - navigation.tabs           # Top-level sections as tabs
+    - navigation.tabs.sticky    # Keep tabs visible when scrolling
+    - navigation.sections       # Group subsections in sidebar
+    - navigation.expand         # Auto-expand all subsections
+    - navigation.indexes        # Enable section index pages
+    - navigation.top            # Back-to-top button
+    - navigation.footer         # Next/previous navigation
+    - navigation.instant        # Instant loading
+    - navigation.tracking       # Track page sections in URL
+    
+    # Table of Contents
+    - toc.follow               # TOC follows scroll
+    
+    # Search Features
+    - search.suggest           # Search suggestions
+    - search.highlight         # Highlight search terms
+    - search.share             # Share search results
+    
+    # Content Features
+    - content.code.copy        # Copy code button
+    - content.code.annotate    # Code annotations
+    - content.footnote.tooltips # Footnote tooltips
+    - content.tabs.link        # Link content tabs
+    - content.action.edit      # Edit button on pages
+    - content.action.view      # View source button
+    
   palette:
     - scheme: default
       primary: blue grey
@@ -27,65 +60,90 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
 
+# Navigation - Cedar-inspired organization
 nav:
   - Home: index.md
-  - Getting Started:
-      - Overview: getting-started/index.md
+  
+  - Quick Start:
+      - Getting Started: getting-started/index.md
       - How It Works: getting-started/how-it-works.md
       - Requirements: getting-started/requirements.md
       - First Steps: getting-started/first-steps.md
       - Partner Qualification: getting-started/partner-qualification.md
-  - Configuration:
-      - Overview: configuration/index.md
+  
+  - Setup & Configuration:
+      - Configuration: configuration/index.md
       - Points & Activities: configuration/points-activities.md
       - Rewards System: configuration/rewards-system.md
       - AI Insights: configuration/ai-insights.md
       - Roles & Permissions: configuration/roles-permissions.md
+  
   - Integrations:
-      - Overview: integrations/index.md
+      - LMS Integrations: integrations/index.md
       - Moodle: integrations/moodle.md
       - Canvas: integrations/canvas.md
       - Open LMS: integrations/olms.md
       - LearnWorlds: integrations/learnworlds.md
       - Custom Integrations: integrations/custom-integrations.md
+  
   - Implementation:
-      - Overview: implementation/index.md
+      - Implementation Guide: implementation/index.md
       - Account Setup: implementation/account-setup.md
       - LMS Integration: implementation/lms-integration.md
       - Testing: implementation/testing.md
       - Go Live: implementation/go-live.md
-  - Analytics:
-      - Overview: analytics/index.md
+  
+  - Analytics & Insights:
+      - Analytics: analytics/index.md
       - Dashboards: analytics/dashboards.md
       - Success Metrics: analytics/success-metrics.md
       - Customer Success: analytics/customer-success.md
       - Financial Reporting: analytics/financial-reporting.md
+  
   - User Guides:
-      - Administrators: user-guides/administrators.md
-      - Instructors: user-guides/instructors.md
-      - Students: user-guides/students.md
-  - Case Studies:
-      - Overview: case-studies/index.md
+      - For Administrators: user-guides/administrators.md
+      - For Instructors: user-guides/instructors.md
+      - For Students: user-guides/students.md
+  
+  - Success Stories:
+      - Case Studies: case-studies/index.md
       - Corporate Training: case-studies/corporate-training.md
       - International School: case-studies/international-school.md
       - University Excellence: case-studies/university-excellence.md
-  - API Reference:
+  
+  - Developer Resources:
       - API Documentation: reference/api-reference.md
       - Authentication: reference/authentication.md
       - Webhooks: reference/webhooks.md
       - Error Codes: reference/error-codes.md
-  - Support:
-      - Overview: support/index.md
+      - Data Security: Data Security/data-security.md
+  
+  - Support & Resources:
+      - Support: support/index.md
       - FAQ: support/faq.md
       - Troubleshooting: support/troubleshooting.md
       - Downloads: support/downloads.md
       - Contact: support/contact.md
-  - Data Security: Data Security/data-security.md
-  - Roadmap: Roadmap/roadmap.md
+      - Roadmap: Roadmap/roadmap.md
 
-# Markdown Extensions
+# Markdown Extensions - Optimized for Cedar content
 markdown_extensions:
+  # Basic extensions
   - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - abbr
+  
+  # Table of contents
+  - toc:
+      permalink: "🚀"
+      toc_depth: 3
+      title: On this page
+  
+  # PyMdown extensions
   - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
@@ -94,38 +152,39 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+      combine_header_slug: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+      auto_title: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      check_paths: true
   - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - attr_list
-  - md_in_html
-  - tables
-  - footnotes
-  - toc:
-      permalink: "🚀"
-      toc_depth: 3
 
 # Plugins
 plugins:
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      lang: en
   - minify:
       minify_html: true
       minify_js: true
       minify_css: true
+      htmlmin_opts:
+        remove_comments: true
 
 # Custom CSS & JavaScript - Cedar-Inspired Styling
 extra_css:
   - stylesheets/extra.css
-  - https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap
-  - https://fonts.googleapis.com/icon?family=Material+Icons
+  - https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap
 
 extra_javascript:
   - assets/js/custom.js

@@ -93,7 +93,7 @@ Before creating your first campaign, ensure:
 ### Step 3: Review and Activate
 
 <div class="alert alert-warning">
-  <h4>⚠️ Important</h4>
+  <h4>:material-alert: Important</h4>
   <p>Review all settings carefully before activation. Some changes may not be possible after the campaign goes live.</p>
 </div>
 
@@ -114,7 +114,7 @@ Before creating your first campaign, ensure:
     Your first campaign is now live! Students will start earning points as soon as they complete the specified activities.
   </div>
   <div class="success-author">
-    <div class="success-avatar">🎉</div>
+    <div class="success-avatar">:material-party-popper:</div>
     <div class="success-details">
       <h4>Campaign Activated</h4>
       <p>Monitor progress through your analytics dashboard</p>

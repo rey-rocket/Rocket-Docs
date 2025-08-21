@@ -1,6 +1,6 @@
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 Rocket Documentation Loaded');
+    console.log('Rocket Documentation Loaded');
     
     // Initialize all interactive components
     initScrollAnimations();
@@ -463,7 +463,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===== ROCKET LAUNCH ANIMATION =====
 function createRocketLaunch() {
     const rocket = document.createElement('div');
-    rocket.innerHTML = '🚀';
+    rocket.innerHTML = '⚡';
     rocket.className = 'rocket-launch';
     
     document.body.appendChild(rocket);
@@ -485,7 +485,7 @@ function trackPerformance() {
     // Track page load time
     window.addEventListener('load', function() {
         const loadTime = performance.now();
-        console.log('🚀 Page loaded in', Math.round(loadTime), 'ms');
+        console.log('Page loaded in', Math.round(loadTime), 'ms');
         
         // Send to analytics if available
         if (typeof gtag !== 'undefined') {
@@ -567,16 +567,16 @@ function initIconFallbacks() {
 
 function createFallbackIcons() {
     const iconMap = {
-        'primary-icon': '🚀',
-        'secondary-icon': '🔗',
-        'tertiary-icon': '👥',
-        'accent-icon': '📈',
-        'gamification-icon': '🎮',
-        'rewards-icon': '🎁',
-        'architecture-icon': '🏗️',
-        'analytics-icon': '📊',
+        'primary-icon': '⚡',
+        'secondary-icon': '⚡',
+        'tertiary-icon': '⚡',
+        'accent-icon': '⚡',
+        'gamification-icon': '⚡',
+        'rewards-icon': '⚡',
+        'architecture-icon': '⚡',
+        'analytics-icon': '⚡',
         'api-icon': '⚡',
-        'support-icon': '🆘'
+        'support-icon': '⚡'
     };
     
     const iconWrappers = document.querySelectorAll('.card-icon-wrapper, .feature-icon-wrapper');

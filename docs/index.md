@@ -65,7 +65,6 @@ For the first time in education, engagement can be measured and rewarded at scal
 
 <div class="cedar-feature-card">
 <div class="feature-icon-wrapper gamification-icon">
-:material-gamepad-variant:{ .cedar-feature-icon }
 </div>
 <h3>Gamification Engine</h3>
 <p>Streaks, ranks, leaderboards, and progression systems that drive sustained engagement through proven behavioral psychology</p>
@@ -74,7 +73,6 @@ For the first time in education, engagement can be measured and rewarded at scal
 
 <div class="cedar-feature-card">
 <div class="feature-icon-wrapper rewards-icon">
-:material-gift:{ .cedar-feature-icon }
 </div>
 <h3>Real-World Rewards</h3>
 <p>3,000+ brand partners across 35+ countries offering authentic motivation with physical and digital prizes</p>
@@ -83,7 +81,6 @@ For the first time in education, engagement can be measured and rewarded at scal
 
 <div class="cedar-feature-card">
 <div class="feature-icon-wrapper architecture-icon">
-:material-server-network:{ .cedar-feature-icon }
 </div>
 <h3>Multi-Tenant Architecture</h3>
 <p>Enterprise-ready platform with isolated data, custom reward catalogs, and role-based permissions</p>
@@ -92,7 +89,6 @@ For the first time in education, engagement can be measured and rewarded at scal
 
 <div class="cedar-feature-card">
 <div class="feature-icon-wrapper analytics-icon">
-:material-chart-box:{ .cedar-feature-icon }
 </div>
 <h3>Analytics Dashboard</h3>
 <p>Comprehensive reporting with Mixpanel integration, engagement metrics, and ROI tracking</p>
@@ -101,7 +97,6 @@ For the first time in education, engagement can be measured and rewarded at scal
 
 <div class="cedar-feature-card">
 <div class="feature-icon-wrapper api-icon">
-:material-api:{ .cedar-feature-icon }
 </div>
 <h3>API Integration</h3>
 <p>RESTful APIs, webhooks, and SDKs for seamless custom integrations and automated workflows</p>
@@ -110,7 +105,6 @@ For the first time in education, engagement can be measured and rewarded at scal
 
 <div class="cedar-feature-card">
 <div class="feature-icon-wrapper support-icon">
-:material-headset:{ .cedar-feature-icon }
 </div>
 <h3>24/7 Support</h3>
 <p>Dedicated customer success team, comprehensive documentation, and white-glove onboarding</p>

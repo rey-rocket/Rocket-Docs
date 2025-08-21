@@ -73,7 +73,7 @@ body {
 
 /* Typography Hierarchy */
 .md-typeset h1 {
-  font-size: 2.625rem; /* 42px */
+  font-size: 2.25rem; /* 36px */
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--spacing-lg);
@@ -81,7 +81,7 @@ body {
 }
 
 .md-typeset h2 {
-  font-size: 2rem; /* 32px */
+  font-size: 1.75rem; /* 28px */
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: var(--spacing-md);
@@ -89,7 +89,7 @@ body {
 }
 
 .md-typeset h3 {
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.25rem; /* 20px */
   font-weight: 500;
   line-height: 1.3;
   margin-bottom: var(--spacing-md);
@@ -99,21 +99,21 @@ body {
 .md-typeset h4,
 .md-typeset h5,
 .md-typeset h6 {
-  font-size: 1.125rem; /* 18px */
+  font-size: 1rem; /* 16px */
   font-weight: 500;
   margin-bottom: var(--spacing-sm);
   color: var(--dark-gray);
 }
 
 .md-typeset p {
-  font-size: 1rem; /* 16px */
+  font-size: 0.875rem; /* 14px */
   line-height: 1.6;
   margin-bottom: var(--spacing-md);
 }
 
 .md-typeset small,
 .md-typeset .md-typeset--small {
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.75rem; /* 12px */
   color: var(--text-muted);
 }
 
@@ -402,7 +402,7 @@ body {
 }
 
 .md-typeset .cedar-nav-card h3 {
-  font-size: 1.25rem !important;
+  font-size: 1.125rem !important;
   font-weight: 600 !important;
   color: var(--dark-gray) !important;
   margin-bottom: var(--spacing-sm) !important;
@@ -411,7 +411,7 @@ body {
 }
 
 .md-typeset .cedar-nav-card p {
-  font-size: 0.95rem !important;
+  font-size: 0.875rem !important;
   color: var(--text-muted) !important;
   line-height: 1.5 !important;
   margin-bottom: var(--spacing-md) !important;
@@ -445,7 +445,7 @@ body {
 }
 
 .md-typeset .cedar-feature-card h3 {
-  font-size: 1.125rem !important;
+  font-size: 1rem !important;
   font-weight: 600 !important;
   color: var(--dark-gray) !important;
   margin-bottom: var(--spacing-sm) !important;
@@ -457,7 +457,7 @@ body {
   color: var(--text-muted) !important;
   line-height: 1.5 !important;
   margin-bottom: var(--spacing-md) !important;
-  font-size: 0.95rem !important;
+  font-size: 0.875rem !important;
 }
 
 /* ===== LINK STYLING ===== */
@@ -584,11 +584,11 @@ body {
   }
   
   .md-typeset h1 {
-    font-size: 2.25rem; /* 36px */
+    font-size: 2rem; /* 32px */
   }
   
   .md-typeset h2 {
-    font-size: 1.75rem; /* 28px */
+    font-size: 1.5rem; /* 24px */
   }
   
   .cedar-navigation-grid {
@@ -609,11 +609,11 @@ body {
   }
   
   .md-typeset h1 {
-    font-size: 2rem; /* 32px */
+    font-size: 1.75rem; /* 28px */
   }
   
   .md-typeset h2 {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.25rem; /* 20px */
   }
   
   .md-nav__link {

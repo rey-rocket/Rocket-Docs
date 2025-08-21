@@ -166,4 +166,4 @@ Need assistance? We're here to help:
 
 ---
 
-Ready to transform student engagement? Let's launch your Rocket implementation! 🚀
+Ready to transform student engagement? Let's launch your Rocket implementation!

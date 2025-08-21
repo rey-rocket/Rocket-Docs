@@ -1,7 +1,7 @@
 
 ---
 
-# 🎁 Points & Rewards System (Technical Overview)
+# Points & Rewards System (Technical Overview)
 
 Rocket translates learning effort into tangible incentives through a modular and secure points engine. This page details how point attribution, management, and redemption are handled.
 
