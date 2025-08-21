@@ -1,975 +1,508 @@
-/* ============================================================================
-   ROCKET CEDAR CSS - Modern Cedar-Inspired Design with Rocket Branding
-   ============================================================================ */
+/**
+ * Rocket Learning Rewards - Cedar-Inspired Layout CSS
+ * CedarOS-style components and navigation enhancements
+ */
 
-:root {
-  /* Cedar-Inspired Color Palette with Rocket Branding */
-  --cedar-primary: #ff6b6b;        /* Rocket Orange */
-  --cedar-secondary: #667eea;      /* Rocket Purple */
-  --cedar-accent: #4ecdc4;         /* Teal accent */
-  --cedar-success: #2ed573;        /* Green */
-  --cedar-warning: #ffa502;        /* Amber */
-  --cedar-error: #ff4757;          /* Red */
-  
-  /* Neutral Colors */
-  --cedar-gray-50: #f9fafb;
-  --cedar-gray-100: #f3f4f6;
-  --cedar-gray-200: #e5e7eb;
-  --cedar-gray-300: #d1d5db;
-  --cedar-gray-400: #9ca3af;
-  --cedar-gray-500: #6b7280;
-  --cedar-gray-600: #4b5563;
-  --cedar-gray-700: #374151;
-  --cedar-gray-800: #1f2937;
-  --cedar-gray-900: #111827;
-  
-  /* Gradients */
-  --cedar-gradient-primary: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
-  --cedar-gradient-secondary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --cedar-gradient-hero: linear-gradient(135deg, #667eea 0%, #ff6b6b 100%);
-  --cedar-gradient-subtle: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-  
-  /* Shadows */
-  --cedar-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --cedar-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --cedar-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --cedar-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --cedar-shadow-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
-  /* Transitions */
-  --cedar-transition-fast: all 0.15s ease;
-  --cedar-transition-normal: all 0.3s ease;
-  --cedar-transition-slow: all 0.5s ease;
+/* ===== CEDAR-INSPIRED CONTENT CARDS ===== */
+
+/* Main content card wrapper */
+.content-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  border: 1px solid var(--border-gray);
+  transition: all 0.3s ease;
 }
 
-/* ============================================================================
-   HERO SECTION - Cedar-Inspired Landing
-   ============================================================================ */
-
-.cedar-hero-section {
-  background: var(--cedar-gradient-hero);
-  color: white;
-  padding: 4rem 2rem 5rem 2rem;
-  margin: -1.5rem -1.5rem 3rem -1.5rem;
-  text-align: center;
-  border-radius: 0 0 24px 24px;
-  position: relative;
-  overflow: hidden;
+.content-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
 }
 
-.cedar-hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("data:image/svg+xml,<svg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'><g fill='none' fill-rule='evenodd'><g fill='%23ffffff' fill-opacity='0.03'><circle cx='30' cy='30' r='2'/></g></svg>") repeat;
-  pointer-events: none;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero-content h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.95;
-  line-height: 1.6;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-/* ============================================================================
-   BUTTONS - Cedar-Style CTAs
-   ============================================================================ */
-
-.rocket-cta {
-  background: var(--cedar-gradient-primary) !important;
-  color: white !important;
-  border: none !important;
-  border-radius: 12px !important;
-  font-weight: 600 !important;
-  text-transform: none !important;
-  transition: var(--cedar-transition-normal) !important;
-  box-shadow: var(--cedar-shadow-lg) !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-.rocket-cta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.rocket-cta:hover::before {
-  left: 100%;
-}
-
-.rocket-cta:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: var(--cedar-shadow-hover) !important;
-}
-
-.rocket-cta-large {
-  padding: 14px 28px !important;
-  font-size: 1.1rem !important;
-  margin: 0.5rem !important;
-}
-
-.secondary-cta {
-  background: rgba(255, 255, 255, 0.15) !important;
-  color: white !important;
-  border: 2px solid rgba(255, 255, 255, 0.3) !important;
-  border-radius: 12px !important;
-  font-weight: 600 !important;
-  padding: 12px 24px !important;
-  transition: var(--cedar-transition-normal) !important;
-  backdrop-filter: blur(10px);
-}
-
-.secondary-cta:hover {
-  background: rgba(255, 255, 255, 0.25) !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
-  transform: translateY(-2px) !important;
-}
-
-/* ============================================================================
-   NAVIGATION CARDS - Quick Access
-   ============================================================================ */
-
-.cedar-navigation-grid {
+/* Quick navigation cards for homepage */
+.nav-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0 3rem 0;
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
 }
 
-.cedar-nav-card {
-  background: var(--cedar-gradient-subtle);
-  border-radius: 16px;
-  padding: 2rem;
-  border: 1px solid var(--cedar-gray-200);
-  transition: var(--cedar-transition-normal);
+.nav-card {
+  background: var(--white);
+  border: 1px solid var(--border-gray);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: var(--cedar-shadow-sm);
 }
 
-.cedar-nav-card::before {
+.nav-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   height: 4px;
-  background: var(--cedar-gradient-primary);
-  opacity: 0;
-  transition: var(--cedar-transition-normal);
-}
-
-.cedar-nav-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--cedar-shadow-xl);
-  border-color: var(--cedar-primary);
-}
-
-.cedar-nav-card:hover::before {
-  opacity: 1;
-}
-
-.card-icon-wrapper {
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  background: var(--cedar-gradient-secondary);
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
-}
-
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.cedar-nav-icon {
-  font-size: 2rem !important;
-  color: white !important;
-}
-
-/* Material Icons Fixes - Ensure proper rendering */
-.cedar-nav-card .card-icon-wrapper svg,
-.cedar-feature-card .feature-icon-wrapper svg {
-  width: 2rem !important;
-  height: 2rem !important;
-  fill: currentColor !important;
-}
-
-/* Force Material Design Icons to render properly */
-.cedar-nav-icon svg,
-.cedar-feature-icon svg {
-  display: block !important;
-  width: 2rem !important;
-  height: 2rem !important;
-  fill: white !important;
-}
-
-/* Ensure Material Design Icons display as SVG, not text */
-.md-typeset .card-icon-wrapper .twemoji,
-.md-typeset .feature-icon-wrapper .twemoji {
-  width: 2rem !important;
-  height: 2rem !important;
-  vertical-align: middle !important;
-}
-
-.cedar-nav-card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: var(--cedar-gray-900);
-}
-
-.cedar-nav-card p {
-  color: var(--cedar-gray-600);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.card-link {
-  color: var(--cedar-primary) !important;
-  font-weight: 600 !important;
-  text-decoration: none !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  transition: var(--cedar-transition-normal) !important;
-}
-
-.card-link::after {
-  content: '→';
-  margin-left: 0.5rem;
-  transition: var(--cedar-transition-normal);
-}
-
-.card-link:hover::after {
-  transform: translateX(4px);
-}
-
-/* ============================================================================
-   FEATURE CARDS - Core Features Grid
-   ============================================================================ */
-
-.cedar-features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0 3rem 0;
-}
-
-.cedar-feature-card {
-  background: var(--cedar-gradient-subtle);
-  border-radius: 20px;
-  padding: 2.5rem;
-  border: 1px solid var(--cedar-gray-200);
-  transition: var(--cedar-transition-normal);
-  position: relative;
-  overflow: hidden;
-  box-shadow: var(--cedar-shadow-md);
-}
-
-.cedar-feature-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  background: var(--cedar-gradient-secondary);
+  background: linear-gradient(90deg, var(--rocket-orange), var(--deep-blue));
   transform: scaleX(0);
   transform-origin: left;
-  transition: var(--cedar-transition-normal);
+  transition: transform 0.3s ease;
 }
 
-.cedar-feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--cedar-shadow-hover);
-  border-color: var(--cedar-secondary);
-}
-
-.cedar-feature-card:hover::before {
+.nav-card:hover::before {
   transform: scaleX(1);
 }
 
-.feature-icon-wrapper {
-  margin-bottom: 2rem;
-  display: flex;
+.nav-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--rocket-orange);
+}
+
+.nav-card__icon {
+  font-size: 2.5rem;
+  color: var(--rocket-orange);
+  margin-bottom: var(--spacing-md);
+  display: block;
+}
+
+.nav-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.3;
+}
+
+.nav-card__description {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+}
+
+.nav-card__cta {
+  font-size: 0.875rem;
+  color: var(--deep-blue);
+  font-weight: 500;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 20px;
-  background: var(--cedar-gradient-primary);
-  position: relative;
+  gap: var(--spacing-xs);
 }
 
-.cedar-feature-icon {
-  font-size: 2.5rem !important;
-  color: white !important;
-}
-
-/* Feature card icon fixes */
-.cedar-feature-card .feature-icon-wrapper .twemoji {
-  width: 2.5rem !important;
-  height: 2.5rem !important;
-  vertical-align: middle !important;
-}
-
-.cedar-feature-icon svg {
-  display: block !important;
-  width: 2.5rem !important;
-  height: 2.5rem !important;
-  fill: white !important;
-}
-
-.cedar-feature-card h3 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--cedar-gray-900);
-}
-
-.cedar-feature-card p {
-  color: var(--cedar-gray-600);
-  line-height: 1.7;
-  margin-bottom: 2rem;
-  font-size: 1.05rem;
-}
-
-.feature-link {
-  color: var(--cedar-secondary) !important;
-  font-weight: 600 !important;
-  text-decoration: none !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  transition: var(--cedar-transition-normal) !important;
-  font-size: 1.1rem !important;
-}
-
-.feature-link::after {
+.nav-card__cta::after {
   content: '→';
-  margin-left: 0.5rem;
-  transition: var(--cedar-transition-normal);
+  transition: transform 0.2s ease;
 }
 
-.feature-link:hover {
-  color: var(--cedar-primary) !important;
-}
-
-.feature-link:hover::after {
+.nav-card:hover .nav-card__cta::after {
   transform: translateX(4px);
 }
 
-/* ============================================================================
-   STATS SECTION - Performance Metrics
-   ============================================================================ */
+/* ===== ENHANCED SIDEBAR NAVIGATION ===== */
 
-.differentiator-section {
-  background: var(--cedar-gray-50);
-  padding: 3rem 2rem;
-  margin: 3rem -1.5rem;
-  border-radius: 24px;
-  text-align: center;
+/* Sidebar improvements */
+.md-sidebar--primary {
+  background: linear-gradient(180deg, var(--white) 0%, #fafafa 100%);
+  border-right: 1px solid var(--border-gray);
 }
 
-.differentiator-section p {
-  font-size: 1.2rem;
-  color: var(--cedar-gray-700);
-  max-width: 700px;
-  margin: 0 auto 3rem auto;
-  line-height: 1.6;
+.md-sidebar__scrollwrap {
+  padding: var(--spacing-md) 0;
 }
 
-.cedar-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+/* Navigation sections */
+.md-nav--primary > .md-nav__list > .md-nav__item {
+  margin-bottom: var(--spacing-md);
 }
 
-.cedar-stat-card {
-  background: white;
-  border-radius: 16px;
-  padding: 2.5rem 1.5rem;
-  box-shadow: var(--cedar-shadow-md);
-  transition: var(--cedar-transition-normal);
-  border: 1px solid var(--cedar-gray-200);
+.md-nav--primary > .md-nav__list > .md-nav__item--section {
+  border-bottom: 1px solid var(--border-gray);
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.md-nav--primary > .md-nav__list > .md-nav__item--section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Section titles */
+.md-nav__item--section > .md-nav__link {
+  background: linear-gradient(135deg, var(--light-gray), #e9ecef);
+  border-radius: var(--radius-sm);
+  margin: 0 var(--spacing-md);
+  padding: var(--spacing-md);
+  font-weight: 700;
+  color: var(--dark-gray);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  border: 1px solid var(--border-gray);
+}
+
+/* Navigation links */
+.md-nav__link {
   position: relative;
-  overflow: hidden;
+  margin: 0 var(--spacing-md);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
 }
 
-.cedar-stat-card::before {
+.md-nav__link::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: var(--cedar-gradient-primary);
-  opacity: 0;
-  transition: var(--cedar-transition-normal);
-  z-index: 0;
+  left: -var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: var(--rocket-orange);
+  border-radius: 2px;
+  transition: height 0.2s ease;
 }
 
-.cedar-stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--cedar-shadow-xl);
+.md-nav__link--active::before,
+.md-nav__link:hover::before {
+  height: 60%;
 }
 
-.cedar-stat-card:hover::before {
-  opacity: 0.05;
-}
-
-.stat-number {
-  font-size: 3rem;
-  font-weight: 900;
-  color: var(--cedar-primary);
-  margin-bottom: 0.5rem;
-  position: relative;
-  z-index: 1;
-}
-
-.stat-label {
-  color: var(--cedar-gray-600);
+.md-nav__link--active {
+  background: linear-gradient(135deg, rgba(243, 103, 57, 0.15), rgba(243, 103, 57, 0.05));
+  color: var(--rocket-orange);
   font-weight: 500;
-  line-height: 1.4;
-  position: relative;
-  z-index: 1;
+  border: 1px solid rgba(243, 103, 57, 0.2);
 }
 
-/* ============================================================================
-   CTA SECTION - Bottom Call-to-Action
-   ============================================================================ */
+.md-nav__link:hover {
+  background: rgba(243, 103, 57, 0.08);
+  color: var(--rocket-orange);
+  padding-left: calc(var(--spacing-md) + 4px);
+}
 
-.cedar-cta-section {
-  background: var(--cedar-gradient-secondary);
-  color: white;
-  padding: 4rem 2rem;
-  margin: 3rem -1.5rem -1.5rem -1.5rem;
+/* Icons in navigation */
+.md-nav__link .md-icon {
+  margin-right: var(--spacing-sm);
+  opacity: 0.7;
+}
+
+.md-nav__link--active .md-icon,
+.md-nav__link:hover .md-icon {
+  opacity: 1;
+  color: var(--rocket-orange);
+}
+
+/* ===== STATUS INDICATORS ===== */
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge--success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success-green);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.status-badge--warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning-amber);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.status-badge--info {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--info-blue);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.status-badge--new {
+  background-color: rgba(243, 103, 57, 0.1);
+  color: var(--rocket-orange);
+  border: 1px solid rgba(243, 103, 57, 0.2);
+}
+
+/* ===== FEATURE SHOWCASE GRID ===== */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.feature-item {
+  background: var(--white);
+  border: 1px solid var(--border-gray);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
   text-align: center;
-  border-radius: 24px 24px 0 0;
-  position: relative;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--deep-blue);
+}
+
+.feature-item__icon {
+  font-size: 3rem;
+  color: var(--rocket-orange);
+  margin-bottom: var(--spacing-md);
+  display: block;
+}
+
+.feature-item__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-sm);
+}
+
+.feature-item__description {
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ===== PROGRESS INDICATORS ===== */
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--light-gray);
+  border-radius: 4px;
   overflow: hidden;
+  margin: var(--spacing-md) 0;
 }
 
-.cedar-cta-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("data:image/svg+xml,<svg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'><g fill='%23ffffff' fill-opacity='0.02'><rect x='20' y='0' width='20' height='20'/><rect x='0' y='20' width='20' height='20'/></g></svg>") repeat;
-  pointer-events: none;
+.progress-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--rocket-orange), var(--deep-blue));
+  border-radius: 4px;
+  transition: width 0.3s ease;
 }
 
-.cta-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  margin: 0 auto;
+/* ===== CALL-TO-ACTION SECTIONS ===== */
+
+.cta-section {
+  background: linear-gradient(135deg, var(--rocket-orange), var(--deep-blue));
+  color: var(--white);
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  text-align: center;
+  margin: var(--spacing-2xl) 0;
 }
 
-.cedar-cta-section h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
+.cta-section__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--white);
 }
 
-.cedar-cta-section p {
-  font-size: 1.2rem;
-  opacity: 0.95;
-  margin-bottom: 2.5rem;
-  line-height: 1.6;
+.cta-section__description {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xl);
+  opacity: 0.9;
 }
 
-.cta-buttons {
+.cta-section .md-button {
+  background-color: var(--white);
+  color: var(--rocket-orange);
+  font-weight: 600;
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1.125rem;
+}
+
+.cta-section .md-button:hover {
+  background-color: var(--light-gray);
+  transform: translateY(-2px);
+}
+
+/* ===== BREADCRUMB NAVIGATION ===== */
+
+.breadcrumb {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--border-gray);
 }
 
-/* ============================================================================
-   DARK MODE ADAPTATIONS
-   ============================================================================ */
+.breadcrumb__item {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.breadcrumb__item:hover {
+  color: var(--rocket-orange);
+}
+
+.breadcrumb__item--current {
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.breadcrumb__separator {
+  color: var(--border-gray);
+  font-size: 0.75rem;
+}
+
+/* ===== SEARCH ENHANCEMENTS ===== */
+
+.md-search-result__item {
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.md-search-result__item:hover {
+  background-color: rgba(243, 103, 57, 0.05);
+}
+
+.md-search-result__title {
+  color: var(--deep-blue);
+  font-weight: 500;
+}
+
+.md-search-result__teaser {
+  color: var(--text-muted);
+}
+
+/* ===== TABLE OF CONTENTS ENHANCEMENTS ===== */
+
+.md-nav--secondary .md-nav__link {
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: 0.875rem;
+  border-left: 2px solid transparent;
+  margin: 0;
+  border-radius: 0;
+}
+
+.md-nav--secondary .md-nav__link--active {
+  border-left-color: var(--rocket-orange);
+  background-color: rgba(243, 103, 57, 0.05);
+  color: var(--rocket-orange);
+}
+
+.md-nav--secondary .md-nav__link:hover {
+  border-left-color: var(--rocket-orange);
+  background-color: rgba(243, 103, 57, 0.08);
+  padding-left: var(--spacing-md);
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+
+@media (max-width: 76.1875em) {
+  .nav-cards {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .cta-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  
+  .cta-section__title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 44.9375em) {
+  .nav-card {
+    padding: var(--spacing-md);
+  }
+  
+  .nav-card__icon {
+    font-size: 2rem;
+  }
+  
+  .nav-card__title {
+    font-size: 1.125rem;
+  }
+  
+  .md-nav__link {
+    margin: 0 var(--spacing-sm);
+    padding: var(--spacing-sm);
+  }
+  
+  .md-nav__item--section > .md-nav__link {
+    margin: 0 var(--spacing-sm);
+    padding: var(--spacing-sm);
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
 
 [data-md-color-scheme="slate"] {
-  --cedar-gradient-subtle: linear-gradient(145deg, #2d3748 0%, #1a202c 100%);
+  --white: #1e1e1e;
+  --light-gray: #2d2d30;
+  --border-gray: #3e3e42;
+  --dark-gray: #ffffff;
+  --text-muted: #cccccc;
 }
 
-[data-md-color-scheme="slate"] .cedar-nav-card,
-[data-md-color-scheme="slate"] .cedar-feature-card {
-  background: var(--cedar-gradient-subtle);
-  border-color: #4a5568;
-  color: white;
+[data-md-color-scheme="slate"] .content-card,
+[data-md-color-scheme="slate"] .nav-card,
+[data-md-color-scheme="slate"] .feature-item {
+  background-color: var(--light-gray);
+  border-color: var(--border-gray);
 }
 
-[data-md-color-scheme="slate"] .cedar-nav-card h3,
-[data-md-color-scheme="slate"] .cedar-feature-card h3 {
-  color: white;
+[data-md-color-scheme="slate"] .md-sidebar--primary {
+  background: linear-gradient(180deg, #1e1e1e 0%, #252526 100%);
 }
 
-[data-md-color-scheme="slate"] .cedar-nav-card p,
-[data-md-color-scheme="slate"] .cedar-feature-card p {
-  color: #cbd5e0;
+[data-md-color-scheme="slate"] .md-nav__item--section > .md-nav__link {
+  background: linear-gradient(135deg, var(--light-gray), #363636);
 }
 
-[data-md-color-scheme="slate"] .differentiator-section {
-  background: #2d3748;
-}
+/* ===== ANIMATION ENHANCEMENTS ===== */
 
-[data-md-color-scheme="slate"] .differentiator-section p {
-  color: #cbd5e0;
-}
-
-[data-md-color-scheme="slate"] .cedar-stat-card {
-  background: #2d3748;
-  border-color: #4a5568;
-  color: white;
-}
-
-[data-md-color-scheme="slate"] .stat-label {
-  color: #cbd5e0;
-}
-
-/* ============================================================================
-   EMERGENCY VISUAL FIXES - Ensure Cards Always Display
-   ============================================================================ */
-
-/* Force card visibility regardless of icon loading status */
-.cedar-nav-card,
-.cedar-feature-card {
-  min-height: 180px !important;
-  display: block !important;
-  background: var(--cedar-gradient-subtle) !important;
-  border: 1px solid var(--cedar-gray-200) !important;
-  border-radius: 16px !important;
-  padding: 2rem !important;
-  margin-bottom: 1rem !important;
-  box-shadow: var(--cedar-shadow-sm) !important;
-  transition: var(--cedar-transition-normal) !important;
-}
-
-.cedar-navigation-grid,
-.cedar-features-grid {
-  display: grid !important;
-  gap: 1.5rem !important;
-  margin: 2rem 0 !important;
-}
-
-.cedar-navigation-grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
-}
-
-.cedar-features-grid {
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-}
-
-/* Ensure icon wrappers are always visible */
-.card-icon-wrapper,
-.feature-icon-wrapper {
-  width: 64px !important;
-  height: 64px !important;
-  border-radius: 16px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin-bottom: 1.5rem !important;
-  background: var(--cedar-gradient-secondary) !important;
-  position: relative !important;
-}
-
-.feature-icon-wrapper {
-  width: 80px !important;
-  height: 80px !important;
-  border-radius: 20px !important;
-  margin-bottom: 2rem !important;
-  background: var(--cedar-gradient-primary) !important;
-}
-
-/* Fallback emoji styling */
-.fallback-emoji {
-  font-size: 2rem !important;
-  line-height: 1 !important;
-  display: block !important;
-  text-align: center !important;
-}
-
-.feature-icon-wrapper .fallback-emoji {
-  font-size: 2.5rem !important;
-}
-
-/* Ensure cards have proper typography even if CSS fails */
-.cedar-nav-card h3,
-.cedar-feature-card h3 {
-  font-size: 1.5rem !important;
-  font-weight: 700 !important;
-  margin-bottom: 1rem !important;
-  color: var(--cedar-gray-900) !important;
-  line-height: 1.3 !important;
-}
-
-.cedar-feature-card h3 {
-  font-size: 1.75rem !important;
-}
-
-.cedar-nav-card p,
-.cedar-feature-card p {
-  color: var(--cedar-gray-600) !important;
-  line-height: 1.6 !important;
-  margin-bottom: 1.5rem !important;
-}
-
-.card-link,
-.feature-link {
-  color: var(--cedar-primary) !important;
-  font-weight: 600 !important;
-  text-decoration: none !important;
-  display: inline-block !important;
-}
-
-.feature-link {
-  color: var(--cedar-secondary) !important;
-}
-
-/* ============================================================================
-   RESPONSIVE DESIGN
-   ============================================================================ */
-
-@media (max-width: 768px) {
-  .cedar-hero-section {
-    padding: 3rem 1rem 4rem 1rem;
-    margin: -1rem -1rem 2rem -1rem;
-    border-radius: 0 0 16px 16px;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .hero-content h2 {
-    font-size: 2.25rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .hero-buttons .md-button {
-    width: 100%;
-    max-width: 280px;
-  }
-  
-  .cedar-navigation-grid,
-  .cedar-features-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .cedar-nav-card,
-  .cedar-feature-card {
-    padding: 1.5rem;
-  }
-  
-  .feature-icon-wrapper {
-    width: 64px;
-    height: 64px;
-  }
-  
-  .cedar-feature-icon {
-    font-size: 2rem !important;
-  }
-  
-  .cedar-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .cedar-stat-card {
-    padding: 2rem 1rem;
-  }
-  
-  .stat-number {
-    font-size: 2.5rem;
-  }
-  
-  .cedar-cta-section {
-    padding: 3rem 1rem;
-    margin: 2rem -1rem -1rem -1rem;
-    border-radius: 16px 16px 0 0;
-  }
-  
-  .cedar-cta-section h2 {
-    font-size: 2rem;
-  }
-  
-  .differentiator-section {
-    padding: 2rem 1rem;
-    margin: 2rem -1rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 480px) {
-  .cedar-stats-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .hero-content h2 {
-    font-size: 2rem;
-  }
-  
-  .cedar-cta-section h2 {
-    font-size: 1.75rem;
-  }
-  
-  .cedar-nav-card,
-  .cedar-feature-card {
-    padding: 1.25rem;
-  }
+.nav-card,
+.feature-item,
+.content-card {
+  animation: fadeInUp 0.6s ease-out;
 }
 
-/* ============================================================================
-   ICON COLOR VARIATIONS
-   ============================================================================ */
-
-.primary-icon { --icon-bg: var(--cedar-gradient-primary); }
-.secondary-icon { --icon-bg: var(--cedar-gradient-secondary); }
-.tertiary-icon { --icon-bg: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%); }
-.accent-icon { --icon-bg: linear-gradient(135deg, #2ed573 0%, #17a2b8 100%); }
-
-.gamification-icon { --icon-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-.rewards-icon { --icon-bg: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); }
-.architecture-icon { --icon-bg: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%); }
-.analytics-icon { --icon-bg: linear-gradient(135deg, #2ed573 0%, #17a2b8 100%); }
-.api-icon { --icon-bg: linear-gradient(135deg, #ffa502 0%, #ff7675 100%); }
-.support-icon { --icon-bg: linear-gradient(135deg, #a55eea 0%, #778beb 100%); }
-
-.card-icon-wrapper,
-.feature-icon-wrapper {
-  background: var(--icon-bg, var(--cedar-gradient-primary));
-}
-
-/* ============================================================================
-   MATERIAL DESIGN ICON RENDERING FIXES
-   ============================================================================ */
-
-/* Ensure Material Design Icons render properly in all contexts */
-.md-typeset .cedar-nav-card .twemoji,
-.md-typeset .cedar-feature-card .twemoji,
-.md-typeset .cedar-nav-icon .twemoji,
-.md-typeset .cedar-feature-icon .twemoji {
-  display: inline-block !important;
-  height: 1em !important;
-  width: 1em !important;
-  vertical-align: text-top !important;
-}
-
-/* Specific sizing for card icons */
-.card-icon-wrapper .twemoji {
-  width: 2rem !important;
-  height: 2rem !important;
-}
-
-.feature-icon-wrapper .twemoji {
-  width: 2.5rem !important;
-  height: 2.5rem !important;
-}
-
-/* Hide broken emoji text, show only the SVG */
-.cedar-nav-icon img,
-.cedar-feature-icon img {
-  filter: brightness(0) invert(1); /* Make sure icons are white */
-}
-
-/* Material Icons Font Fallbacks */
-.card-icon-wrapper.primary-icon::before {
-  content: 'rocket_launch';
-  font-family: 'Material Icons';
-  font-size: 2rem;
-  color: white;
-  position: absolute;
-  display: none; /* Show only if SVG fails */
-}
-
-.card-icon-wrapper.secondary-icon::before {
-  content: 'link';
-  font-family: 'Material Icons';
-  font-size: 2rem;
-  color: white;
-  position: absolute;
-  display: none;
-}
-
-.card-icon-wrapper.tertiary-icon::before {
-  content: 'group';
-  font-family: 'Material Icons';
-  font-size: 2rem;
-  color: white;
-  position: absolute;
-  display: none;
-}
-
-.card-icon-wrapper.accent-icon::before {
-  content: 'trending_up';
-  font-family: 'Material Icons';
-  font-size: 2rem;
-  color: white;
-  position: absolute;
-  display: none;
-}
-
-.feature-icon-wrapper.gamification-icon::before {
-  content: 'sports_esports';
-  font-family: 'Material Icons';
-  font-size: 2.5rem;
-  color: white;
-  position: absolute;
-  display: none;
-}
-
-.feature-icon-wrapper.rewards-icon::before {
-  content: 'card_giftcard';
-  font-family: 'Material Icons';
-  font-size: 2.5rem;
-  color: white;
-  position: absolute;
-  display: none;
-}
-
-.feature-icon-wrapper.architecture-icon::before {
-  content: 'domain';
-  font-family: 'Material Icons';
-  font-size: 2.5rem;
-  color: white;
-  position: absolute;
-  display: none;
-}
-
-.feature-icon-wrapper.analytics-icon::before {
-  content: 'bar_chart';
-  font-family: 'Material Icons';
-  font-size: 2.5rem;
-  color: white;
-  position: absolute;
-  display: none;
-}
-
-.feature-icon-wrapper.api-icon::before {
-  content: 'api';
-  font-family: 'Material Icons';
-  font-size: 2.5rem;
-  color: white;
-  position: absolute;
-  display: none;
-}
-
-.feature-icon-wrapper.support-icon::before {
-  content: 'support_agent';
-  font-family: 'Material Icons';
-  font-size: 2.5rem;
-  color: white;
-  position: absolute;
-  display: none;
-}
-
-/* Show Material Icons font fallback if SVG doesn't load */
-.card-icon-wrapper:empty::before,
-.feature-icon-wrapper:empty::before {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* Force proper icon alignment */
-.cedar-nav-card .card-icon-wrapper,
-.cedar-feature-card .feature-icon-wrapper {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.cedar-nav-card .card-icon-wrapper > *,
-.cedar-feature-card .feature-icon-wrapper > * {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* Ensure Material icons override default emoji styling */
-.cedar-nav-icon,
-.cedar-feature-icon {
-  line-height: 1 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* ============================================================================
-   PERFORMANCE OPTIMIZATIONS
-   ============================================================================ */
-
-.cedar-nav-card,
-.cedar-feature-card,
-.cedar-stat-card {
-  will-change: transform;
-}
-
-.cedar-hero-section,
-.cedar-cta-section {
-  background-attachment: fixed;
-}
+.nav-card:nth-child(2) { animation-delay: 0.1s; }
+.nav-card:nth-child(3) { animation-delay: 0.2s; }
+.nav-card:nth-child(4) { animation-delay: 0.3s; }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  
-  .card-icon-wrapper {
+  .nav-card,
+  .feature-item,
+  .content-card {
     animation: none;
   }
 }
