@@ -4,7 +4,14 @@
       "Bash(mkdocs:*)",
       "Bash(python:*)",
       "Bash(dir stylesheets)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "WebFetch(domain:rocketlearningrewards.com)",
+      "Bash(pip --version)",
+      "Bash(.venvScriptsactivate)",
+      "Bash(pip install:*)",
+      "Bash(\".venv\\Scripts\\activate.bat\")",
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
