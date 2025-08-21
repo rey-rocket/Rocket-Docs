@@ -1,34 +1,22 @@
+
 {% extends "base.html" %}
 
-{% block header %}
-  <!-- Custom Rocket Header -->
-  <header class="custom-rocket-header">
-    <div class="header-inner">
-      <a href="https://rocketeducationrewards.com/" class="logo-link">
-        <img src="/assets/logo.png" alt="Rocket Education Rewards Logo" height="40" />
-      </a>
-      <nav class="main-nav">
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/rewards/">Rewards</a>
-        <a href="/contact/">Contact</a>
-      </nav>
-    </div>
-  </header>
+{% block site_meta %}
   {{ super() }}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rocket Education Rewards Documentation">
+  <meta property="og:description" content="Comprehensive documentation for the Rocket Learning Rewards platform">
+  <meta property="og:image" content="{{ config.site_url }}assets/images/rocket-og-image.png">
 {% endblock %}
 
-{% block footer %}
+{% block htmltitle %}
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+{% endblock %}
+
+{% block styles %}
   {{ super() }}
-  <!-- Custom Rocket Footer -->
-  <footer class="custom-rocket-footer">
-    <div class="footer-inner">
-      <p>&copy; {{ config.site_name }} {{ now().year }}. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="https://twitter.com/rocketedu" target="_blank">Twitter</a> |
-        <a href="https://facebook.com/rocketedu" target="_blank">Facebook</a> |
-        <a href="mailto:info@rocketeducationrewards.com">Contact</a>
-      </div>
-    </div>
-  </footer>
+  <link rel="stylesheet" href="{{ 'stylesheets/rocket-theme.css' | url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 {% endblock %}

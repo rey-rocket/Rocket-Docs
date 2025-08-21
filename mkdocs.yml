@@ -1,85 +1,168 @@
-site_name: Rocket - Launch pad
-site_description: Complete knowledge base to help you get started with Rocket's behavioural change and learning engagement platform
-site_url: http://127.0.0.1:8000/  # change this
-theme:
-  features:
-    - content.footnote.tooltips
+site_name: Rocket Learning Rewards
+site_url: https://rey-rocket.github.io/Rocket-Docs/
+site_description: Fuel Engagement. Reward Progress. Drive Success.
 
+# Theme Configuration - Left Navigation Style
+theme:
   name: material
-  logo: assets/logo.png
-  favicon: assets/favicon.ico
-  font:
-    text: Poppins
-    code: Roboto Mono
+  custom_dir: overrides/  # For custom templates
+  
   palette:
     - scheme: default
-      primary: blue grey
+      primary: custom
       accent: orange
       toggle:
-        icon: material/weather-night
+        icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: blue grey
-      accent: orange
+      primary: custom
+      accent: orange  
       toggle:
-        icon: material/weather-sunny
+        icon: material/brightness-4
         name: Switch to light mode
+  
+  font:
+    text: Inter
+    code: JetBrains Mono
+  
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.ico
+  
+  features:
+    # LEFT SIDEBAR NAVIGATION (remove tabs)
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    
+    # SEARCH & CONTENT FEATURES
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    
+    # ENHANCED UX
+    - header.autohide
+    - toc.follow
+    - toc.integrate
 
+# CEDAR-INSPIRED NAVIGATION STRUCTURE
 nav:
-  - Home: index.md
-  - About:
-      - Foundations: About/Foundations.md
-      - Vision & Goals: About/Vision.md
-  - How it works: About/How-it-works.md
-  - Getting Started:
-      - Overview: Onboarding/overview.md
-      - Administrators: Onboarding/administrator.md
-      - Instructors: Onboarding/instructor.md
-      - Learners: Onboarding/learner.md
+  - Introduction to Rocket:
+    - index.md
+    - How It Works: getting-started/how-it-works.md
+    - Partner Qualification: getting-started/partner-qualification.md
+    - Success Stories: case-studies/index.md
+  
+  - Quick Start:
+    - Getting Started: getting-started/index.md
+    - Requirements: getting-started/requirements.md
+    - First Steps: getting-started/first-steps.md
+    - Go Live: implementation/go-live.md
+  
+  - Core Features:
+    - Gamification Engine: configuration/points-activities.md
+    - Rewards System: configuration/rewards-system.md
+    - Analytics Dashboard: analytics/index.md
+    - AI Insights: configuration/ai-insights.md
+    - Multi-Tenancy: configuration/roles-permissions.md
+  
   - Integrations:
-      - Moodle: Integrations/moodle.md
-      - Open LMS: Integrations/olms.md
-      - Canvas: Integrations/canvas.md
-      - LearnWorlds: Integrations/learnworlds.md
-  - Rewards: Rewards/rewards.md 
+    - integrations/index.md
+    - LMS Integration: implementation/lms-integration.md
+    - Custom Integrations: integrations/custom-integrations.md
+    - API Reference: reference/api-reference.md
+    - Webhooks: reference/webhooks.md
+  
+  - User Guides:
+    - Administrators: user-guides/administrators.md
+    - Instructors: user-guides/instructors.md
+    - Students: user-guides/students.md
+  
+  - Support & Resources:
+    - support/index.md
+    - FAQ: support/faq.md
+    - Troubleshooting: support/troubleshooting.md
+    - Downloads: support/downloads.md
+    - Contact: support/contact.md
 
-  - Troubleshooting: 
-      - Frequently Asked Questions (FAQs): Troubleshooting/faq.md
-      - Reset Your Password: Troubleshooting/password-reset.md
-  - Compliance & Data Security: Data Security/data-security.md
-  - Roadmap: Roadmap/roadmap.md
-  - Contact: Contact/contact.md
-
-extra:
-  social:
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/rocket-education-rewards
-    - icon: fontawesome/solid/envelope
-      link: mailto:hello@rocketeducationrewards.com
-  generator: false
-
+# Markdown Extensions
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - attr_list
   - md_in_html
-  - def_list
-  - pymdownx.tasklist:
-      custom_checkbox: true
+  - tables
   - footnotes
+  - toc:
+      permalink: "🚀"
+      toc_depth: 3
 
+# Plugins
 plugins:
-  - social
   - search:
-      
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
 
+# Custom CSS & JavaScript - Cedar-Inspired Styling
+extra_css:
+  - stylesheets/rocket-theme.css
+  - stylesheets/rocket-cedar.css
+  - assets/css/custom.css
+  - https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap
+  - https://fonts.googleapis.com/icon?family=Material+Icons
 
+extra_javascript:
+  - assets/js/custom.js
 
+# Footer & Social
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/rocket-education-rewards
+      name: Follow us on LinkedIn
+    - icon: fontawesome/brands/twitter  
+      link: https://twitter.com/rocketeducation
+      name: Follow us on Twitter
+    - icon: fontawesome/solid/envelope
+      link: mailto:support@rocketeducationrewards.com
+      name: Email Support
+    - icon: fontawesome/solid/phone
+      link: tel:+44-800-ROCKET-1
+      name: Call Support
+  
+  generator: false  # Remove "Made with Material for MkDocs"
+  
+  # Custom footer content
+  status:
+    new: Recently added
+    deprecated: Deprecated
 
+copyright: |
+  Copyright &copy; 2025 <a href="https://rocketeducationrewards.com" target="_blank">Rocket Education Rewards</a><br>
+  <span style="font-size: 0.8em;">Fuel Engagement. Reward Progress. Drive Success.</span>

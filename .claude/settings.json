@@ -1,0 +1,56 @@
+{
+  "projectSettings": {
+    "name": "Rocket Learning Rewards Documentation",
+    "type": "mkdocs",
+    "framework": "material",
+    "buildCommand": "mkdocs build",
+    "serveCommand": "mkdocs serve",
+    "deployCommand": "mkdocs gh-deploy"
+  },
+  "codeStyle": {
+    "language": "markdown",
+    "indentSize": 2,
+    "maxLineLength": 80,
+    "preferDoubleQuotes": false
+  },
+  "testing": {
+    "buildValidation": true,
+    "linkChecking": true,
+    "responsiveDesign": true
+  },
+  "hooks": {
+    "pre-commit": "mkdocs build --quiet",
+    "pre-push": "mkdocs build && echo 'Build successful'"
+  },
+  "tools": {
+    "preferredBrowser": "default",
+    "imageOptimization": true,
+    "cssMinification": true
+  },
+  "workflows": {
+    "common": [
+      "Always run 'mkdocs serve' to test changes locally",
+      "Validate navigation structure after adding new pages", 
+      "Check mobile responsiveness for new designs",
+      "Test dark/light mode compatibility",
+      "Verify all internal links work after content reorganization"
+    ]
+  },
+  "branding": {
+    "primaryColor": "#ff6b6b",
+    "secondaryColor": "#667eea", 
+    "accentColor": "#ee5a24",
+    "logoPath": "docs/assets/images/logo.png",
+    "faviconPath": "docs/assets/images/favicon.ico"
+  },
+  "transformation": {
+    "targetDesign": "Cedar Copilot inspired",
+    "keyPrinciples": [
+      "Clean, modern card-based layouts",
+      "Logical navigation hierarchy",
+      "Rocket brand consistency",
+      "Mobile-first responsive design",
+      "Dark/light mode support"
+    ]
+  }
+}
