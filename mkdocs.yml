@@ -4,91 +4,84 @@ site_description: Fuel Engagement. Reward Progress. Drive Success.
 
 # Theme Configuration - Left Navigation Style
 theme:
+  features:
+    - content.footnote.tooltips
+
   name: material
-  custom_dir: overrides/  # For custom templates
-  
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  font:
+    text: Poppins
+    code: Roboto Mono
   palette:
     - scheme: default
-      primary: custom
+      primary: blue grey
       accent: orange
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: custom
-      accent: orange  
+      primary: blue grey
+      accent: orange
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: Switch to light mode
-  
-  font:
-    text: Inter
-    code: JetBrains Mono
-  
-  logo: assets/images/logo.png
-  favicon: assets/images/favicon.ico
-  
-  features:
-    # LEFT SIDEBAR NAVIGATION (remove tabs)
-    - navigation.sections
-    - navigation.expand
-    - navigation.indexes
-    - navigation.instant
-    - navigation.tracking
-    - navigation.top
-    - navigation.footer
-    
-    # SEARCH & CONTENT FEATURES
-    - search.highlight
-    - search.share
-    - search.suggest
-    - content.code.copy
-    - content.code.annotate
-    - content.tabs.link
-    
-    # ENHANCED UX
-    - header.autohide
-    - toc.follow
 
-# CEDAR-INSPIRED NAVIGATION STRUCTURE
 nav:
-  - Introduction to Rocket:
-    - index.md
-    - How It Works: getting-started/how-it-works.md
-    - Partner Qualification: getting-started/partner-qualification.md
-    - Success Stories: case-studies/index.md
-  
-  - Quick Start:
-    - Getting Started: getting-started/index.md
-    - Requirements: getting-started/requirements.md
-    - First Steps: getting-started/first-steps.md
-    - Go Live: implementation/go-live.md
-  
-  - Core Features:
-    - Gamification Engine: configuration/points-activities.md
-    - Rewards System: configuration/rewards-system.md
-    - Analytics Dashboard: analytics/index.md
-    - AI Insights: configuration/ai-insights.md
-    - Multi-Tenancy: configuration/roles-permissions.md
-  
+  - Home: index.md
+  - Getting Started:
+      - Overview: getting-started/index.md
+      - How It Works: getting-started/how-it-works.md
+      - Requirements: getting-started/requirements.md
+      - First Steps: getting-started/first-steps.md
+      - Partner Qualification: getting-started/partner-qualification.md
+  - Configuration:
+      - Overview: configuration/index.md
+      - Points & Activities: configuration/points-activities.md
+      - Rewards System: configuration/rewards-system.md
+      - AI Insights: configuration/ai-insights.md
+      - Roles & Permissions: configuration/roles-permissions.md
   - Integrations:
-    - integrations/index.md
-    - LMS Integration: implementation/lms-integration.md
-    - Custom Integrations: integrations/custom-integrations.md
-    - API Reference: reference/api-reference.md
-    - Webhooks: reference/webhooks.md
-  
+      - Overview: integrations/index.md
+      - Moodle: integrations/moodle.md
+      - Canvas: integrations/canvas.md
+      - Open LMS: integrations/olms.md
+      - LearnWorlds: integrations/learnworlds.md
+      - Custom Integrations: integrations/custom-integrations.md
+  - Implementation:
+      - Overview: implementation/index.md
+      - Account Setup: implementation/account-setup.md
+      - LMS Integration: implementation/lms-integration.md
+      - Testing: implementation/testing.md
+      - Go Live: implementation/go-live.md
+  - Analytics:
+      - Overview: analytics/index.md
+      - Dashboards: analytics/dashboards.md
+      - Success Metrics: analytics/success-metrics.md
+      - Customer Success: analytics/customer-success.md
+      - Financial Reporting: analytics/financial-reporting.md
   - User Guides:
-    - Administrators: user-guides/administrators.md
-    - Instructors: user-guides/instructors.md
-    - Students: user-guides/students.md
-  
-  - Support & Resources:
-    - support/index.md
-    - FAQ: support/faq.md
-    - Troubleshooting: support/troubleshooting.md
-    - Downloads: support/downloads.md
-    - Contact: support/contact.md
+      - Administrators: user-guides/administrators.md
+      - Instructors: user-guides/instructors.md
+      - Students: user-guides/students.md
+  - Case Studies:
+      - Overview: case-studies/index.md
+      - Corporate Training: case-studies/corporate-training.md
+      - International School: case-studies/international-school.md
+      - University Excellence: case-studies/university-excellence.md
+  - API Reference:
+      - API Documentation: reference/api-reference.md
+      - Authentication: reference/authentication.md
+      - Webhooks: reference/webhooks.md
+      - Error Codes: reference/error-codes.md
+  - Support:
+      - Overview: support/index.md
+      - FAQ: support/faq.md
+      - Troubleshooting: support/troubleshooting.md
+      - Downloads: support/downloads.md
+      - Contact: support/contact.md
+  - Data Security: Data Security/data-security.md
+  - Roadmap: Roadmap/roadmap.md
 
 # Markdown Extensions
 markdown_extensions:
