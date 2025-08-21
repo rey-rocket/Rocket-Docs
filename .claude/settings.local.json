@@ -12,7 +12,10 @@
       "Bash(\".venv\\Scripts\\activate.bat\")",
       "Bash(git add:*)",
       "Bash(git push:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(if exist \"docs\\stylesheets\\rocket-theme.css\" del \"docs\\stylesheets\\rocket-theme.css\")",
+      "Bash(if exist \"docs\\stylesheets\\rocket-cedar.css\" del \"docs\\stylesheets\\rocket-cedar.css\")",
+      "Bash(if exist \"docs\\stylesheets\\custom.css\" del \"docs\\stylesheets\\custom.css\")"
     ],
     "deny": [],
     "ask": []
