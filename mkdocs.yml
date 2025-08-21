@@ -49,7 +49,6 @@ theme:
     # ENHANCED UX
     - header.autohide
     - toc.follow
-    - toc.integrate
 
 # CEDAR-INSPIRED NAVIGATION STRUCTURE
 nav:

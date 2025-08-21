@@ -104,86 +104,94 @@
   transform: translateX(4px);
 }
 
-/* ===== ENHANCED SIDEBAR NAVIGATION ===== */
+/* ===== ENHANCED SIDEBAR NAVIGATION (CEDAR STYLE) ===== */
 
-/* Sidebar improvements */
+/* Clean sidebar background */
 .md-sidebar--primary {
-  background: linear-gradient(180deg, var(--white) 0%, #fafafa 100%);
-  border-right: 1px solid var(--border-gray);
+  background: var(--white) !important;
+  border-right: 1px solid var(--border-gray) !important;
+  width: 260px !important;
 }
 
 .md-sidebar__scrollwrap {
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-lg) 0 !important;
+  margin: 0 !important;
 }
 
-/* Navigation sections */
+/* Navigation sections - cleaner grouping */
 .md-nav--primary > .md-nav__list > .md-nav__item {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm) !important;
 }
 
 .md-nav--primary > .md-nav__list > .md-nav__item--section {
-  border-bottom: 1px solid var(--border-gray);
-  padding-bottom: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg) !important;
+  padding-bottom: var(--spacing-md) !important;
+  border-bottom: 1px solid var(--border-gray) !important;
 }
 
 .md-nav--primary > .md-nav__list > .md-nav__item--section:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
+  border-bottom: none !important;
+  margin-bottom: var(--spacing-md) !important;
 }
 
-/* Section titles */
+/* Section titles - Cedar style */
 .md-nav__item--section > .md-nav__link {
-  background: linear-gradient(135deg, var(--light-gray), #e9ecef);
-  border-radius: var(--radius-sm);
-  margin: 0 var(--spacing-md);
-  padding: var(--spacing-md);
-  font-weight: 700;
-  color: var(--dark-gray);
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 0.5px;
-  border: 1px solid var(--border-gray);
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0 var(--spacing-md) !important;
+  padding: var(--spacing-sm) 0 !important;
+  font-weight: 600 !important;
+  color: var(--dark-gray) !important;
+  text-transform: uppercase !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.5px !important;
+  transition: none !important;
 }
 
-/* Navigation links */
+/* Navigation links - clean Cedar style */
 .md-nav__link {
-  position: relative;
-  margin: 0 var(--spacing-md);
-  border-radius: var(--radius-sm);
-  transition: all 0.2s ease;
-  font-size: 0.9rem;
+  position: relative !important;
+  margin: 0 var(--spacing-md) !important;
+  padding: var(--spacing-xs) var(--spacing-sm) !important;
+  border-radius: var(--radius-sm) !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.875rem !important;
+  color: var(--text-muted) !important;
+  border: none !important;
+  background: none !important;
+  line-height: 1.4 !important;
 }
 
 .md-nav__link::before {
-  content: '';
-  position: absolute;
-  left: -var(--spacing-md);
-  top: 50%;
-  transform: translateY(-50%);
-  width: 3px;
-  height: 0;
-  background: var(--rocket-orange);
-  border-radius: 2px;
-  transition: height 0.2s ease;
+  content: '' !important;
+  position: absolute !important;
+  left: -2px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 2px !important;
+  height: 0 !important;
+  background: var(--rocket-orange) !important;
+  border-radius: 1px !important;
+  transition: height 0.2s ease !important;
 }
 
-.md-nav__link--active::before,
-.md-nav__link:hover::before {
-  height: 60%;
+.md-nav__link:hover::before,
+.md-nav__link--active::before {
+  height: 70% !important;
 }
 
 .md-nav__link--active {
-  background: linear-gradient(135deg, rgba(243, 103, 57, 0.15), rgba(243, 103, 57, 0.05));
-  color: var(--rocket-orange);
-  font-weight: 500;
-  border: 1px solid rgba(243, 103, 57, 0.2);
+  background: rgba(243, 103, 57, 0.08) !important;
+  color: var(--rocket-orange) !important;
+  font-weight: 500 !important;
+  border: none !important;
 }
 
 .md-nav__link:hover {
-  background: rgba(243, 103, 57, 0.08);
-  color: var(--rocket-orange);
-  padding-left: calc(var(--spacing-md) + 4px);
+  background: rgba(243, 103, 57, 0.05) !important;
+  color: var(--rocket-orange) !important;
+  transform: translateX(2px) !important;
 }
 
 /* Icons in navigation */
