@@ -1,83 +1,246 @@
 # LMS Integrations
 
-Rocket seamlessly connects with 15+ learning management systems to provide automated gamification and rewards. Choose your platform for specific setup instructions.
+Rocket Learning Rewards seamlessly connects with leading learning management systems and educational platforms to provide automated gamification, real-time activity tracking, and comprehensive analytics integration.
 
-## Popular Integrations
+## Core LMS Platforms
 
-### Canvas
-Our most popular integration with comprehensive grade sync and automated point allocation.
-[Canvas Setup Guide →](../implementation/lms-integration.md)
+<div class="cedar-features-grid">
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper primary-icon">
+:material-school:{ .cedar-feature-icon }
+</div>
+<h3>Moodle Integration</h3>
+<p>Native plugin with deep integration for 67 trackable activities, comprehensive event mapping, and seamless point allocation</p>
+<a href="moodle/" class="feature-link">Setup Moodle →</a>
+</div>
 
-### Moodle  
-Native plugin with deep integration for activities, completion tracking, and badges.
-[Moodle Integration →](moodle.md)
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper secondary-icon">
+:material-web:{ .cedar-feature-icon }
+</div>
+<h3>OpenLMS Integration</h3>
+<p>Enhanced security, simplified admin interface, and robust webhook configuration for enterprise deployments</p>
+<a href="olms/" class="feature-link">Setup OpenLMS →</a>
+</div>
 
-### Blackboard
-Enterprise-ready integration with single sign-on and advanced reporting.
-[Blackboard Setup →](../implementation/lms-integration.md)
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper tertiary-icon">
+:material-book-open-variant:{ .cedar-feature-icon }
+</div>
+<h3>LearnWorlds Integration</h3>
+<p>Complete course progress tracking with automated reward distribution for online course platforms</p>
+<a href="learnworlds/" class="feature-link">Setup LearnWorlds →</a>
+</div>
 
-### LearnWorlds
-Complete integration with course progress tracking and automated rewards.
-[LearnWorlds Guide →](learnworlds.md)
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper primary-icon">
+:material-canvas:{ .cedar-feature-icon }
+</div>
+<h3>Canvas Integration</h3>
+<p>Comprehensive grade synchronization with real-time point allocation and advanced analytics capabilities</p>
+<a href="canvas/" class="feature-link">Setup Canvas →</a>
+</div>
 
-## All Supported Platforms
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper secondary-icon">
+:material-api:{ .cedar-feature-icon }
+</div>
+<h3>Custom Integrations</h3>
+<p>Build custom connections using our comprehensive REST API with webhook support and SDK libraries</p>
+<a href="custom-integrations/" class="feature-link">Build Custom →</a>
+</div>
 
-| Platform | Integration Type | Setup Time | Features |
-|----------|------------------|------------|----------|
-| **Canvas** | Native Plugin | 15 mins | Grade sync, SSO, Analytics |
-| **Moodle** | Official Plugin | 20 mins | Activity tracking, Badges |
-| **Blackboard** | REST API | 30 mins | Grade sync, User import |
-| **LearnWorlds** | Webhook | 15 mins | Progress tracking |
-| **Schoology** | API Integration | 25 mins | Assignment sync |
-| **Brightspace/D2L** | LTI 1.3 | 20 mins | Grade passback |
-| **Google Classroom** | API | 15 mins | Assignment tracking |
-| **Microsoft Teams** | Graph API | 20 mins | Class integration |
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper tertiary-icon">
+:material-cloud:{ .cedar-feature-icon }
+</div>
+<h3>Third-Party Services</h3>
+<p>Integrate with reward providers, analytics platforms, and survey tools for complete ecosystem connectivity</p>
+<a href="#third-party-integrations" class="feature-link">View Services →</a>
+</div>
+</div>
 
-## Integration Features
+## Integration Architecture
 
-### Automatic Grade Sync
-- Real-time grade updates trigger point awards
-- Customizable point scales per assignment type
-- Bulk historical grade import for existing courses
+### Event Tracking System
+**Comprehensive Activity Monitoring**
+- **67 Trackable Activities** across supported LMS platforms
+- **Real-time Event Processing** with immediate point allocation
+- **Flexible Event Mapping** customizable to institutional needs
+- **Fraud Prevention** with frequency limits and validation
 
-### User Management
-- Automatic student enrollment from LMS rosters  
-- Role-based permissions sync
-- Single sign-on (SSO) support
+**Key Events Tracked:**
+- **Course Module Completion** - Automatic progress tracking
+- **Quiz Attempts & Completion** - Engagement and assessment tracking  
+- **Assignment Submissions** - Academic milestone recognition
+- **Discussion Forum Posts** - Collaborative learning participation
+- **Resource Views** - Content engagement measurement
+- **Grade Updates** - Achievement recognition and point allocation
 
-### Activity Tracking
-- Course completion monitoring
-- Assignment submission tracking
-- Discussion participation points
-- Login streak tracking
+### Webhook Configuration
+**Secure Real-time Communication**
+- **Encrypted Data Transmission** with SSL/TLS security
+- **Event Validation** to ensure data integrity
+- **Error Handling** with automatic retry mechanisms
+- **Monitoring & Logging** for troubleshooting and optimization
 
-## Custom Integrations
+### Point Allocation Matrix
+**Intelligent Scoring System**
+- **Point Values** range from 10–200 based on activity importance
+- **Activity Weighting** aligned with educational objectives
+- **Frequency Limits** to prevent system gaming
+- **Custom Scaling** per institution and course requirements
 
-Need an integration not listed? We provide:
+## Supported Platforms
 
-- **API Documentation**: Complete REST API for custom builds
-- **Webhook Support**: Real-time event notifications
-- **SDK Libraries**: Pre-built connectors for popular frameworks
-- **Enterprise Support**: Dedicated integration specialists
+### Learning Management Systems
 
-[View API Reference →](../reference/api-reference.md)
+| Platform | Integration Type | Setup Time | Key Features |
+|----------|------------------|------------|--------------|
+| **Moodle** | Native Plugin | 20 mins | 67 events, badges, completion tracking |
+| **OpenLMS** | Webhook API | 25 mins | Enhanced security, enterprise features |
+| **Canvas** | LTI 1.3 | 15 mins | Grade sync, SSO, analytics dashboard |
+| **Blackboard** | REST API | 30 mins | Grade passback, user import |
+| **LearnWorlds** | Webhook | 15 mins | Course progress, automated rewards |
+| **Brightspace/D2L** | LTI 1.3 | 20 mins | Grade sync, user management |
+| **Google Classroom** | API | 15 mins | Assignment tracking, roster sync |
+| **Schoology** | API Integration | 25 mins | Assignment sync, grade passback |
 
-## Setup Process
+### Compatibility & Requirements
 
-1. **Choose Your Platform**: Select from supported LMS options
-2. **Install Integration**: Follow platform-specific setup guide  
-3. **Configure Points**: Set up gamification rules and rewards
-4. **Test & Launch**: Verify integration with test data
+**Moodle Compatibility**
+- **Supported Versions:** 3.11, 4.0, 4.1, 4.4, 4.5
+- **Installation Methods:** Admin panel or CLI
+- **Requirements:** Administrator access for plugin installation
+- **Download Source:** Official Moodle plugin directory
 
-## Getting Help
+**Technical Prerequisites**
+- **Administrative Access** to your LMS platform
+- **Webhook Capability** for real-time event processing
+- **Network Security** configuration for secure data transmission
+- **API Access** for user management and grade synchronization
 
-- **Integration Support**: Dedicated technical specialists
-- **Live Setup Assistance**: Screen-sharing setup sessions
-- **Documentation**: Comprehensive guides for each platform
-- **Community Forum**: Connect with other administrators
+## Third-Party Integrations
 
-[Get Integration Help →](../support/contact.md)
+### Reward Provider Integration
 
----
+**Tillo Gift Card Platform**
 
-**Ready to integrate?** Choose your LMS platform above or start with our [Implementation Guide](../implementation/lms-integration.md).
+*Sandbox Environment*
+- **Testing URL:** https://sandbox.tillo.io/
+- **Purpose:** Development and validation testing
+- **Limitations:** Limited brand availability for testing
+- **Features:** Complete integration testing capabilities
+
+*Production Environment*
+- **Full Brand Catalog:** Access to complete reward options
+- **Real Transactions:** Live money processing capabilities
+- **Security Requirements:** IP whitelisting for secure access
+- **Monitoring:** Float balance tracking and reconciliation
+
+**Supported Operations:**
+- **Brand Catalog Management** - List available reward options
+- **Gift Card Order Creation** - Process student redemptions
+- **Redemption Status Tracking** - Monitor transaction completion
+- **Rank-based Discount Application** - Automated discount calculation
+
+### Survey Integration
+
+**HeyForm Survey Platform**
+
+**Webhook Configuration:**
+- **Real-time Notifications** for survey completion
+- **Automatic Point Allocation** upon submission
+- **Response Data Capture** for analytics and insights
+- **Weekly Limit Enforcement** to prevent system abuse
+
+**Features:**
+- **100 Points Per Survey** with configurable limits
+- **Embedded Survey Experience** within Rocket app
+- **Response Analytics** for engagement insights
+- **Custom Survey Creation** aligned with educational goals
+
+### Analytics Integration
+
+**Mixpanel Analytics Platform**
+
+**Event Tracking Categories:**
+- **User Registration & Onboarding** - Account setup and initial engagement
+- **Point Earning Activities** - All LMS activity completions
+- **Reward Redemptions** - Purchase behavior and preferences
+- **Engagement Patterns** - Usage frequency and feature adoption
+- **Financial Transactions** - Complete audit trail and reconciliation
+
+**Custom Metrics Available:**
+- **Student Retention Rates** - Long-term engagement tracking
+- **Average Points Per User** - Individual and cohort performance
+- **Redemption Conversion Rates** - Reward program effectiveness
+- **Streak Maintenance Statistics** - Habit formation analysis
+
+## Integration Process
+
+### Phase 1: Planning & Preparation
+1. **LMS Assessment** - Evaluate current system capabilities
+2. **Requirements Gathering** - Define integration scope and objectives
+3. **Security Review** - Ensure compliance with institutional policies
+4. **Timeline Planning** - Coordinate with implementation team
+
+### Phase 2: Technical Setup
+1. **Plugin Installation** - Deploy Rocket integration components
+2. **Webhook Configuration** - Establish secure communication channels
+3. **Event Mapping** - Configure activity-to-point allocations
+4. **Testing Environment** - Validate integration with test data
+
+### Phase 3: Validation & Launch
+1. **Comprehensive Testing** - Verify all integration points
+2. **Security Validation** - Confirm data protection measures
+3. **User Acceptance Testing** - Pilot with select users
+4. **Production Launch** - Full deployment with monitoring
+
+## Integration Support
+
+### Technical Support Services
+:material-tools: **Integration Specialists**
+- **LMS Plugin Installation** - Expert assistance with platform setup
+- **Webhook Configuration** - Secure endpoint establishment
+- **API Integration Support** - Custom development assistance
+- **Troubleshooting** - Issue diagnosis and resolution
+
+### Implementation Resources
+:material-book-open: **Comprehensive Documentation**
+- **Platform-specific Guides** - Step-by-step setup instructions
+- **API Reference** - Complete technical documentation
+- **Best Practices** - Optimization recommendations
+- **Troubleshooting Guides** - Common issue resolution
+
+### Ongoing Support
+:material-headset: **Customer Success Team**
+- **Performance Monitoring** - Integration health tracking
+- **Optimization Recommendations** - Continuous improvement guidance
+- **Feature Updates** - New capability announcements
+- **Community Support** - Peer learning and best practices sharing
+
+## Custom Development
+
+### API Capabilities
+**RESTful API Architecture**
+- **Complete Documentation** with interactive examples
+- **Authentication Methods** - OAuth 2.0 and API key support
+- **Rate Limiting** - Fair usage policies and guidelines
+- **Webhook Support** - Real-time event notifications
+
+### SDK Libraries
+**Pre-built Development Tools**
+- **Popular Framework Support** - React, Angular, Vue.js
+- **Backend Libraries** - Node.js, Python, PHP, Java
+- **Mobile SDKs** - iOS and Android native integration
+- **Documentation** - Complete implementation guides
+
+### Enterprise Support
+**Dedicated Development Assistance**
+- **Custom Integration Development** - Tailored solution creation
+- **Technical Architecture Review** - Best practices consultation
+- **Performance Optimization** - Scalability and efficiency improvement
+- **Priority Support** - Dedicated technical resources
+
+Ready to integrate your platform? **[Choose Your LMS →](#core-lms-platforms)** or **[Contact Integration Support →](../support/contact/)**

@@ -2,9 +2,16 @@
 
 Welcome to Rocket Learning Rewards! Transform student engagement with our comprehensive gamification platform that turns learning into an exciting, rewarding experience.
 
-## What is Rocket Education Rewards?
+## What is Rocket Learning Rewards?
 
-Rocket is an educational rewards system designed to incentivise positive student engagement in learning management systems (LMS). The platform provides points-based rewards for academic activities and allows students to redeem points for real-world rewards and discounts.
+Rocket Learning Rewards is a behavioral-change and engagement layer for learning that listens to events from your LMS or training platform, awards points for positive learning behaviors, and lets learners redeem points for real-world rewards.
+
+### Target Users
+
+- **Students/Learners:** Primary users earning and redeeming points through academic activities
+- **Administrators:** Manage the program, configure rules, and monitor engagement
+- **Instructors:** Track student progress and optimize course engagement  
+- **Learning Managers:** Monitor learner engagement and program effectiveness
 
 ## Core Features
 

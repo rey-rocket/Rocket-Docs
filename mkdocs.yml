@@ -69,7 +69,6 @@ nav:
       - How It Works: getting-started/how-it-works.md
       - Requirements: getting-started/requirements.md
       - First Steps: getting-started/first-steps.md
-      - Partner Qualification: getting-started/partner-qualification.md
   
   - Setup & Configuration:
       - Configuration: configuration/index.md
@@ -102,29 +101,26 @@ nav:
   
   - User Guides:
       - For Administrators: user-guides/administrators.md
-      - For Instructors: user-guides/instructors.md
       - For Students: user-guides/students.md
   
   - Success Stories:
       - Case Studies: case-studies/index.md
-      - Corporate Training: case-studies/corporate-training.md
-      - International School: case-studies/international-school.md
-      - University Excellence: case-studies/university-excellence.md
   
   - Developer Resources:
       - API Documentation: reference/api-reference.md
-      - Authentication: reference/authentication.md
+      - Developer Resources: reference/developer-resources.md
       - Webhooks: reference/webhooks.md
+      - Authentication: reference/authentication.md
+      - Data Security: reference/data-security.md
       - Error Codes: reference/error-codes.md
-      - Data Security: Data Security/data-security.md
   
   - Support & Resources:
       - Support: support/index.md
+      - Contact: support/contact.md
       - FAQ: support/faq.md
       - Troubleshooting: support/troubleshooting.md
       - Downloads: support/downloads.md
-      - Contact: support/contact.md
-      - Roadmap: Roadmap/roadmap.md
+      - Roadmap: support/roadmap.md
 
 # Markdown Extensions - Optimized for Cedar content
 markdown_extensions:
