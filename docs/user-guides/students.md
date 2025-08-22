@@ -300,4 +300,4 @@ Your current rank determines your discount level:
 
 Ready to start earning? Begin with your course activities and watch your points grow! 
 
-**[View Current Rewards ’](../support/downloads/)** | **[Contact Support ’](../support/contact/)**
+**[View Current Rewards â€™](../support/downloads/)** | **[Contact Support â€™](../support/contact/)**

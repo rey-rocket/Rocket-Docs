@@ -9,7 +9,7 @@ Webhooks provide real-time event delivery from learning management systems to Ro
 ### Event Flow
 
 ```
-[LMS Event] ’ [Webhook Trigger] ’ [HTTP POST] ’ [Rocket Ingestion] ’ [Points Allocation] ’ [Analytics]
+[LMS Event] â†’ [Webhook Trigger] â†’ [HTTP POST] â†’ [Rocket Ingestion] â†’ [Points Allocation] â†’ [Analytics]
 ```
 
 ### Supported Sources
@@ -477,4 +477,4 @@ function updateMetrics(success, responseTime) {
 3. Rate limiting or quota exceeded
 4. Internal server resource constraints
 
-Ready to implement webhooks? **[View Integration Guides ’](../integrations/)** or **[Contact Support ’](../support/contact/)**
+Ready to implement webhooks? **[View Integration Guides â†’](../integrations/)** or **[Contact Support â†’](../support/contact/)**

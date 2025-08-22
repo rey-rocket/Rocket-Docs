@@ -16,7 +16,9 @@
       "Bash(if exist \"docs\\stylesheets\\rocket-theme.css\" del \"docs\\stylesheets\\rocket-theme.css\")",
       "Bash(if exist \"docs\\stylesheets\\rocket-cedar.css\" del \"docs\\stylesheets\\rocket-cedar.css\")",
       "Bash(if exist \"docs\\stylesheets\\custom.css\" del \"docs\\stylesheets\\custom.css\")",
-      "WebFetch(domain:squidfunk.github.io)"
+      "WebFetch(domain:squidfunk.github.io)",
+      "WebFetch(domain:rey-rocket.github.io)",
+      "Bash(gh api:*)"
     ],
     "deny": [],
     "ask": []

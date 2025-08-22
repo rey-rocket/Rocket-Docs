@@ -306,4 +306,4 @@ Your organization maintains a central float balance that funds all student rewar
 - Peer networking and collaboration
 - Feature requests and feedback
 
-Ready to launch your program? **[Contact Implementation Support ’](../support/contact/)** or **[Schedule Training Session ’](../support/contact/)**
+Ready to launch your program? **[Contact Implementation Support â€™](../support/contact/)** or **[Schedule Training Session â€™](../support/contact/)**

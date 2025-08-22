@@ -433,4 +433,4 @@ For custom integrations or unsupported platforms:
 3. **Integration Support:** Dedicated technical assistance
 4. **Certification Program:** Validation and certification for custom integrations
 
-Ready to integrate? **[Start with Webhooks Setup ’](webhooks/)** or **[Contact Technical Support ’](../support/contact/)**
+Ready to integrate? **[Start with Webhooks Setup â†’](webhooks/)** or **[Contact Technical Support â†’](../support/contact/)**

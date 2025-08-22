@@ -698,4 +698,4 @@ const alerting = {
 - For production outages only
 - Include: Impact assessment and business justification
 
-Ready to resolve your issue? **[Start with the diagnostic checklist ’](#quick-diagnostic-checklist)** or **[Contact Support ’](contact/)**
+Ready to resolve your issue? **[Start with the diagnostic checklist â€™](#quick-diagnostic-checklist)** or **[Contact Support â€™](contact/)**
