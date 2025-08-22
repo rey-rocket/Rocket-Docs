@@ -1,60 +1,126 @@
-# Configuration
+# Configuration Overview
 
-Set up your Rocket Learning Rewards system with the right configuration to maximize student engagement and learning outcomes.
+The Rocket Learning Rewards platform offers extensive configuration options to tailor the experience to your institution's needs. This section covers system setup, customization options, and administrative controls.
 
-## Core Configuration Areas
+## Configuration Categories
 
-<div class="cedar-navigation-grid">
-
-<div class="cedar-nav-card">
-<div class="card-icon-wrapper primary-icon">
-:material-gamepad-variant:{ .cedar-nav-icon }
+<div class="cedar-features-grid">
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper primary-icon">
+:material-cog:{ .cedar-feature-icon }
 </div>
 <h3>Points & Activities</h3>
-<p>Configure point values, learning activities, and achievement conditions</p>
-<a href="points-activities/" class="card-link">Configure Points �</a>
+<p>Configure point values, activity tracking, and earning mechanisms for optimal student engagement</p>
+<a href="points-activities/" class="feature-link">Configure Points System →</a>
 </div>
 
-<div class="cedar-nav-card">
-<div class="card-icon-wrapper secondary-icon">
-:material-gift:{ .cedar-nav-icon }
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper secondary-icon">
+:material-gift:{ .cedar-feature-icon }
 </div>
 <h3>Rewards System</h3>
-<p>Set up reward catalogs, redemption rules, and brand partnerships</p>
-<a href="rewards-system/" class="card-link">Setup Rewards �</a>
+<p>Set up reward catalogs, discount structures, and redemption controls aligned with your budget</p>
+<a href="rewards-system/" class="feature-link">Configure Rewards →</a>
 </div>
 
-<div class="cedar-nav-card">
-<div class="card-icon-wrapper tertiary-icon">
-:material-brain:{ .cedar-nav-icon }
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper tertiary-icon">
+:material-account-multiple:{ .cedar-feature-icon }
 </div>
-<h3>AI Insights</h3>
-<p>Enable intelligent analytics and personalized learning recommendations</p>
-<a href="ai-insights/" class="card-link">Enable AI �</a>
-</div>
-
-<div class="cedar-nav-card">
-<div class="card-icon-wrapper accent-icon">
-:material-account-group:{ .cedar-nav-icon }
-</div>
-<h3>Roles & Permissions</h3>
-<p>Manage user access, administrative roles, and security settings</p>
-<a href="roles-permissions/" class="card-link">Manage Roles �</a>
+<h3>User Management</h3>
+<p>Define user roles, permissions, and organizational structure for effective administration</p>
+<a href="roles-permissions/" class="feature-link">Configure Users →</a>
 </div>
 
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper primary-icon">
+:material-chart-line:{ .cedar-feature-icon }
+</div>
+<h3>Analytics Setup</h3>
+<p>Configure tracking, reporting, and dashboard access for comprehensive insights</p>
+<a href="../analytics/" class="feature-link">Configure Analytics →</a>
 </div>
 
-## Getting Started
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper secondary-icon">
+:material-shield-check:{ .cedar-feature-icon }
+</div>
+<h3>Security & Compliance</h3>
+<p>Implement data protection, access controls, and regulatory compliance measures</p>
+<a href="ai-insights/" class="feature-link">Configure Security →</a>
+</div>
 
-1. **[Points & Activities](points-activities/)** - Start by setting up your point system
-2. **[Rewards System](rewards-system/)** - Configure rewards that motivate your learners  
-3. **[Roles & Permissions](roles-permissions/)** - Set up user access and permissions
-4. **[AI Insights](ai-insights/)** - Enable advanced analytics and personalization
+<div class="cedar-feature-card">
+<div class="feature-icon-wrapper tertiary-icon">
+:material-api:{ .cedar-feature-icon }
+</div>
+<h3>LMS Integration</h3>
+<p>Connect your learning management system with proper event tracking and webhook configuration</p>
+<a href="../implementation/lms-integration/" class="feature-link">Configure Integration →</a>
+</div>
+</div>
 
-## Quick Configuration Checklist
+## Configuration Workflow
 
-- [ ] Define point values for learning activities
-- [ ] Configure reward catalog and redemption rules
-- [ ] Set up user roles and permissions
-- [ ] Enable AI insights and analytics
-- [ ] Test configuration with pilot group
+### Phase 1: Core System Setup
+1. **Organization Registration** - Initial setup with Rocket team
+2. **Financial Configuration** - Float allocation and budget controls  
+3. **Domain Setup** - Custom branding and email authentication
+4. **Admin Account Creation** - Establish administrative access
+
+### Phase 2: Educational Configuration
+1. **Points System Design** - Activity mapping and point values
+2. **Reward Catalog Setup** - Available rewards and discount structures
+3. **Rank System Customization** - Progression thresholds and benefits
+4. **LMS Integration** - Event tracking and webhook configuration
+
+### Phase 3: Operational Configuration
+1. **User Import Process** - Student data preparation and bulk import
+2. **Security Controls** - Access permissions and compliance measures
+3. **Reporting Setup** - Analytics and monitoring configuration
+4. **Support Procedures** - Help desk and escalation protocols
+
+## Pre-Configuration Requirements
+
+### Technical Prerequisites
+- **LMS Admin Access** - Required for plugin installation and webhook setup
+- **Email System Integration** - Institutional email authentication capability
+- **Domain Authority** - Ability to configure subdomains (optional)
+- **Network Security** - Firewall and IP whitelisting capabilities
+
+### Organizational Prerequisites  
+- **Budget Authority** - Approval for financial float allocation
+- **Student Data Access** - Ability to export student enrollment information
+- **Policy Alignment** - Compliance with institutional privacy and financial policies
+- **Support Structure** - Designated administrators and help desk coordination
+
+### Financial Prerequisites
+- **Float Funding** - Initial budget allocation for reward pool
+- **Conversion Rate Agreement** - Points to currency ratio (typically 100:1)
+- **Spending Controls** - Daily and weekly limit policies
+- **Reconciliation Process** - Regular financial reporting and audit procedures
+
+## Configuration Support
+
+### Implementation Support
+:material-account-tie: **Dedicated Implementation Manager**
+- Project planning and timeline development
+- Stakeholder communication and coordination  
+- Configuration guidance and best practices
+- Go-live support and immediate issue resolution
+
+### Technical Support  
+:material-tools: **Integration Specialists**
+- LMS plugin installation and configuration
+- Webhook setup and event mapping
+- API integration and troubleshooting
+- Performance optimization and monitoring
+
+### Ongoing Support
+:material-headset: **Customer Success Team**
+- Regular configuration reviews and optimization
+- Feature updates and enhancement planning
+- Usage analytics and performance insights
+- Community best practices and peer learning
+
+Ready to configure your platform? Start with **[Points & Activities Setup →](points-activities/)** or **[Contact Implementation Support →](../support/contact/)**
