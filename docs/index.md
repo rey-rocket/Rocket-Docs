@@ -23,7 +23,7 @@ For the first time in education, engagement can be measured and rewarded at scal
 
 <div class="cedar-nav-card">
 <div class="card-icon-wrapper primary-icon">
-:material-rocket-launch:{ .cedar-nav-icon }
+:material-rocket-launch:
 </div>
 <h3>Getting Started</h3>
 <p>Set up your first rewards system in under 30 minutes with our step-by-step guide</p>
@@ -32,7 +32,7 @@ For the first time in education, engagement can be measured and rewarded at scal
 
 <div class="cedar-nav-card">
 <div class="card-icon-wrapper secondary-icon">
-:material-link-variant:{ .cedar-nav-icon }
+:material-link-variant:
 </div>
 <h3>LMS Integration</h3>
 <p>Connect seamlessly with Moodle, Canvas, Blackboard, and 15+ other platforms</p>
@@ -41,7 +41,7 @@ For the first time in education, engagement can be measured and rewarded at scal
 
 <div class="cedar-nav-card">
 <div class="card-icon-wrapper tertiary-icon">
-:material-account-group:{ .cedar-nav-icon }
+:material-account-group:
 </div>
 <h3>User Management</h3>
 <p>Onboard thousands of students with CSV imports and role-based permissions</p>
@@ -50,7 +50,7 @@ For the first time in education, engagement can be measured and rewarded at scal
 
 <div class="cedar-nav-card">
 <div class="card-icon-wrapper accent-icon">
-:material-chart-line:{ .cedar-nav-icon }
+:material-chart-line:
 </div>
 <h3>Analytics & Insights</h3>
 <p>Track engagement metrics and optimize learning outcomes with AI-powered insights</p>

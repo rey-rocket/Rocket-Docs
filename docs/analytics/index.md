@@ -11,7 +11,7 @@ Gain comprehensive insights into student engagement, learning outcomes, and prog
 </div>
 <h3>Student Analytics</h3>
 <p>Deep insights into student engagement patterns, learning behaviors, and achievement progression</p>
-<a href="dashboards/" class="feature-link">View Dashboards ’</a>
+<a href="dashboards/" class="feature-link">View Dashboards â†’</a>
 </div>
 
 <div class="cedar-feature-card">
@@ -20,7 +20,7 @@ Gain comprehensive insights into student engagement, learning outcomes, and prog
 </div>
 <h3>Financial Reporting</h3>
 <p>Complete financial tracking including spend analysis, ROI measurement, and budget optimization</p>
-<a href="financial-reporting/" class="feature-link">Financial Reports ’</a>
+<a href="financial-reporting/" class="feature-link">Financial Reports â†’</a>
 </div>
 
 <div class="cedar-feature-card">
@@ -29,7 +29,7 @@ Gain comprehensive insights into student engagement, learning outcomes, and prog
 </div>
 <h3>Success Metrics</h3>
 <p>Track key performance indicators that demonstrate educational impact and program effectiveness</p>
-<a href="success-metrics/" class="feature-link">View Metrics ’</a>
+<a href="success-metrics/" class="feature-link">View Metrics â†’</a>
 </div>
 
 <div class="cedar-feature-card">
@@ -38,7 +38,7 @@ Gain comprehensive insights into student engagement, learning outcomes, and prog
 </div>
 <h3>Customer Success</h3>
 <p>Comprehensive program health monitoring with optimization recommendations and best practices</p>
-<a href="customer-success/" class="feature-link">Success Tools ’</a>
+<a href="customer-success/" class="feature-link">Success Tools â†’</a>
 </div>
 </div>
 
@@ -106,118 +106,4 @@ Gain comprehensive insights into student engagement, learning outcomes, and prog
 - Financial summaries for accounting and compliance
 - Custom report generation for specific analysis needs
 
-## Real-time Monitoring
-
-### Dashboard Analytics
-**Live Performance Tracking**
-- Current active users and engagement levels
-- Real-time point earning and redemption activity
-- Financial spend monitoring with budget alerts
-- System performance and reliability metrics
-
-**Alert Systems**
-- Automatic notifications for budget threshold breaches
-- Unusual activity pattern detection and fraud prevention
-- System performance alerts and uptime monitoring
-- Success milestone celebrations and achievements
-
-### Usage Trend Analysis
-**Behavioral Pattern Recognition**
-- Student spending preferences and seasonal variations
-- Activity type popularity and engagement drivers
-- Time-based usage patterns and optimal engagement windows
-- Predictive analysis for student success and retention
-
-### Predictive Analytics
-**Budget Forecasting & Planning**
-- Spend prediction based on historical patterns
-- Seasonal adjustment recommendations
-- Growth planning and capacity management
-- ROI projection and optimization opportunities
-
-## Custom Reporting
-
-### Automated Report Generation
-**Monthly Financial Reconciliation**
-- Complete transaction history and audit documentation
-- Float balance changes and fund utilization analysis
-- Redemption patterns and trending insights
-- ROI analysis with learning outcome correlation
-
-**Weekly Engagement Reports**
-- User participation and activity completion metrics
-- Streak maintenance and rank progression tracking
-- Feature usage and adoption analysis
-- Performance trending and optimization insights
-
-### On-Demand Analytics
-**Custom Query Capabilities**
-- Ad-hoc analysis for specific institutional questions
-- Filtered reporting based on demographics, courses, or time periods
-- Comparative analysis across different student cohorts
-- Performance benchmarking against program objectives
-
-## Success Measurement Framework
-
-### Educational Impact Metrics
-**Learning Outcome Correlation**
-- Academic performance improvement tracking
-- Course completion rate enhancement measurement
-- Student retention and persistence improvements
-- Long-term educational success correlation
-
-**Engagement Quality Assessment**
-- Depth of interaction with learning materials
-- Quality of participation in discussions and activities
-- Consistent engagement over time measurement
-- Self-directed learning behavior development
-
-### Program Effectiveness Indicators
-**Adoption and Utilization Rates**
-- Student registration and activation percentages
-- Feature adoption and usage frequency
-- Support ticket volume and resolution efficiency
-- Overall program satisfaction and Net Promoter Score
-
-**Financial Efficiency Analysis**
-- Cost per engagement hour calculation
-- Budget utilization optimization opportunities
-- Reward catalog performance and preference analysis
-- Administrative overhead and operational efficiency
-
-## Analytics Access & Permissions
-
-### Role-Based Dashboard Access
-**Super Admin Analytics**
-- Complete financial oversight and budget management
-- Organization-wide performance metrics and trends
-- Advanced security and fraud detection monitoring
-- Strategic planning and ROI analysis tools
-
-**Standard Admin Analytics**  
-- Student engagement and academic performance tracking
-- Course-level and program-specific analytics
-- Support and customer success monitoring
-- Operational efficiency and usage optimization
-
-**Instructor Analytics**
-- Course-specific student engagement insights
-- Individual student progress and achievement tracking
-- Activity effectiveness and optimization recommendations
-- Class performance comparisons and improvement opportunities
-
-## Data Export & Integration
-
-### Export Formats
-- **Excel/CSV Downloads** - Standard reporting formats for offline analysis
-- **Google Sheets Integration** - Real-time collaborative analytics and sharing
-- **API Access** - Custom integration with institutional systems
-- **Mixpanel Dashboards** - Advanced behavioral analytics and visualization
-
-### Data Security & Compliance
-- **GDPR Compliance** - European student data protection standards
-- **FERPA Compliance** - US educational privacy requirements  
-- **Data Anonymization** - Privacy-preserving analytics capabilities
-- **Audit Trail Maintenance** - Complete transaction and access logging
-
-Ready to unlock the power of your data? **[Explore Dashboards ’](dashboards/)** or **[Contact Analytics Support ’](../support/contact/)**
+Ready to unlock the power of your data? **[Explore Dashboards â†’](dashboards/)** or **[Contact Analytics Support â†’](../support/contact/)**
