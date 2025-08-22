@@ -27,8 +27,8 @@ def define_env(env):
         }
         
         rank_icons = {
-            "explorer": "🌟",
-            "pilot": "🚀",
+            "explorer": "⚡",
+            "pilot": "⚡",
             "commander": "👑"
         }
         
@@ -88,7 +88,7 @@ def define_env(env):
         """
     
     @env.macro
-    def achievement_card(title: str, description: str, icon: str = "🏆", unlocked: bool = True) -> str:
+    def achievement_card(title: str, description: str, icon: str = "⚡", unlocked: bool = True) -> str:
         """
         Generate an achievement card
         
@@ -117,7 +117,7 @@ def define_env(env):
                 <h3 class="text-xl font-bold">{title}</h3>
             </div>
             <p class="text-sm">{description}</p>
-            {'' if unlocked else '<div class="text-xs mt-2 opacity-70">🔒 Locked</div>'}
+            {'' if unlocked else '<div class="text-xs mt-2 opacity-70">⚡ Locked</div>'}
         </div>
         """
     
@@ -138,7 +138,7 @@ def define_env(env):
         
         return f"""
         <div class="points-counter inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full shadow-lg {animation_class}">
-            <span class="text-xl mr-2">⭐</span>
+            <span class="text-xl mr-2">⚡</span>
             <span class="font-bold text-lg">{points:,}</span>
             <span class="text-sm ml-1">{label}</span>
         </div>
@@ -169,7 +169,7 @@ def define_env(env):
         
         return f"""
         <div class="rocket-launch-button {button_class} {text_class} {hover_effect} rounded-xl p-6 text-center shadow-lg mb-4">
-            <div class="text-4xl mb-2">🚀</div>
+            <div class="text-4xl mb-2">⚡</div>
             <div class="font-bold text-lg">Rocket Launch</div>
             <div class="text-sm opacity-90">{status_text}</div>
         </div>
@@ -228,8 +228,8 @@ def define_env(env):
         status_configs = {
             "active": {"color": "#10b981", "icon": "✅", "text": "Active"},
             "beta": {"color": "#f59e0b", "icon": "🧪", "text": "Beta"},
-            "planned": {"color": "#6b7280", "icon": "📋", "text": "Planned"},
-            "deprecated": {"color": "#ef4444", "icon": "⚠️", "text": "Deprecated"}
+            "planned": {"color": "#6b7280", "icon": "⚡", "text": "Planned"},
+            "deprecated": {"color": "#ef4444", "icon": "⚡", "text": "Deprecated"}
         }
         
         config = status_configs.get(status.lower(), status_configs["active"])
@@ -307,7 +307,7 @@ def define_env(env):
         return f"""
         <div class="requirement-check bg-blue-50 rounded-lg p-6 mb-6 border-l-4 border-blue-500">
             <h4 class="font-semibold text-blue-800 mb-4 flex items-center">
-                <span class="mr-2">📋</span>{title}
+                <span class="mr-2">⚡</span>{title}
             </h4>
             <ul class="text-blue-700">
                 {''.join(requirement_items)}
@@ -346,11 +346,11 @@ def define_env(env):
             HTML string for the callout
         """
         callout_configs = {
-            "info": {"color": "#3b82f6", "icon": "ℹ️", "bg": "bg-blue-50"},
+            "info": {"color": "#3b82f6", "icon": "⚡", "bg": "bg-blue-50"},
             "success": {"color": "#10b981", "icon": "✅", "bg": "bg-green-50"},
-            "warning": {"color": "#f59e0b", "icon": "⚠️", "bg": "bg-yellow-50"},
+            "warning": {"color": "#f59e0b", "icon": "⚡", "bg": "bg-yellow-50"},
             "error": {"color": "#ef4444", "icon": "❌", "bg": "bg-red-50"},
-            "rocket": {"color": "#f97316", "icon": "🚀", "bg": "bg-orange-50"}
+            "rocket": {"color": "#f97316", "icon": "⚡", "bg": "bg-orange-50"}
         }
         
         config = callout_configs.get(type.lower(), callout_configs["info"])
